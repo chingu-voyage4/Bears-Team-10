@@ -1,30 +1,26 @@
 {
-  "name": "bears10",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.17.1",
-    "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.1.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.7",
-    "react-router": "^4.2.0",
-    "react-scripts": "1.1.1",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0",
-    "run-all": "^1.0.1"
-  },
+  "name": "bears-team-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
   "scripts": {
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index --prefix server",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelgee22/Bears-Team-10.git"
+  },
+  "author": "bears-team-10",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
   }
 }
