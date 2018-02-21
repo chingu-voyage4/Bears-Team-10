@@ -7,7 +7,6 @@ import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import allReducers from './reducers';
 
-
 /* Added this reducer function to fix issue, not part of Bucky's tutorial
 const reducer = function(state, action) {
   return state;
