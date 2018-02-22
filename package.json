@@ -20,7 +20,9 @@
     "express": "^4.16.2",
     "font-awesome": "^4.7.0",
     "mongoose": "^5.0.3",
-    "react-fa": "^5.0.0"
+    "react-fa": "^5.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.14.11"

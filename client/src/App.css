@@ -114,3 +114,28 @@ a {
     text-transform: uppercase; }
     .Footer a:hover {
       color: #FFC107; }
+
+.container {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10em; }
+  .container h2, .container h3 {
+    text-align: center; }
+  .container h3 {
+    padding-top: 1em; }
+  .container hr {
+    width: 60%; }
+  .container .description img {
+    max-width: 600px;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1em; }
+  .container .description p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4; }
