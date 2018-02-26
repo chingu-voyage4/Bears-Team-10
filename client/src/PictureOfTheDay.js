@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-
 import {fetchPOD} from './actions/pod-action';
 
-connect((store) => {
-  return {
-    pod: store.podData
-  };
-})
-
-export default class PictureOfTheDay extends Component {
-  componentWillMount() {
-    this.props.dispatch(fetchPOD());
+class PictureOfTheDay extends Component {
+  componentDidMount() {
+    this.props.fetchPOD();
   }
 
   render() {
@@ -24,3 +17,14 @@ export default class PictureOfTheDay extends Component {
     )
   }
 }
+
+const mapDispatchToProps = dispatch =>  ({
+  fetchPOD: () => dispatch(fetchPOD())
+})
+
+const mapStateToProps = state => ({
+  pod: state.pod
+})
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(PictureOfTheDay);
