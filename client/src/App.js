@@ -11,7 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-         <Reddit subreddit="Nasa" />
+         <PictureOfTheDay />
+         <Reddit subreddit="NASA" />
          <Reddit subreddit="SpaceX" />
         <Footer />
       </div>

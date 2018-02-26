@@ -9,12 +9,17 @@ class PictureOfTheDay extends Component {
 
   render() {
     const {pod} = this.props;
+    const blah = {pod};
 
     return (
       <div>
-        {pod}
+        {Object.keys(blah).map((key) => (
+            <div>
+              {blah[key].title}
+            </div>
+        ))}
       </div>
-    )
+    );
   }
 }
 
