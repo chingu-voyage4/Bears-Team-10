@@ -13,7 +13,7 @@ export default class Reddit extends Component {
 
   // ${this.props.subreddit}
   componentDidMount() {
-    axios.get(`https://cors-anywhere.herokuapp.com/http://www.reddit.com/r/${this.props.subreddit}.json`)
+    axios.get(`https://cors-anywhere.herokuapp.com/http://www.reddit.com/r/${this.props.subreddit}.json?&limit=8`)
       .then(res => {
         const data = res.data.data.children.map(obj => obj.data);
         this.setState({redditData: data});
@@ -24,13 +24,16 @@ export default class Reddit extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Top {this.props.subreddit} Stories from Reddit</h1>
+      <div className="reddit-container">
+        <h3>Top {this.props.subreddit} Stories from Reddit</h3>
+        <hr />
+        <div className="stories">
         <ul>
           {this.state.redditData.map(post =>
-              <li key={post.id}><a href={post.url}>{post.title}</a></li>
+              <li key={post.id} className="story"><a href={post.url}>{post.title}</a></li>
             )}
         </ul>
+        </div>
       </div>
     );
   }
