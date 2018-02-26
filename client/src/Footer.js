@@ -15,9 +15,9 @@ class Footer extends Component {
         </ul>
         <ul className="footer-section">
           <h3>Social</h3>
-          <li><a href="#"><Icon name="github" size="2x" stack />Github</a></li>
-          <li><a href="#"><Icon name="github" size="2x" stack />Github</a></li>
-          <li><a href="#"><Icon name="github" size="2x" stack />Github</a></li>
+          <li><a href="#"><Icon name="github" size="2x" />Github</a></li>
+          <li><a href="#"><Icon name="github" size="2x" />Github</a></li>
+          <li><a href="#"><Icon name="github" size="2x" />Github</a></li>
         </ul>
         <ul className="footer-section">
           <h3>Blah</h3>

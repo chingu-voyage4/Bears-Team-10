@@ -17,7 +17,7 @@ export default class Reddit extends Component {
       .then(res => {
         const data = res.data.data.children.map(obj => obj.data);
         this.setState({redditData: data});
-        console.log(this.state.redditData);
+        //console.log(this.state.redditData);
       })
   }
 
