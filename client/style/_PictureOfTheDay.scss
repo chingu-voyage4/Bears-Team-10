@@ -1,0 +1,38 @@
+
+.container {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10em;
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  h3 {
+    padding-top: 1em;
+  }
+
+  hr {
+    width: 60%;
+  }
+
+  .description {
+    img {
+      max-width: 600px;
+      height: auto;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding: 1em;
+    }
+
+    p {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+  }
+}

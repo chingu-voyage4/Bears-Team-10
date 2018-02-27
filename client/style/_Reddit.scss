@@ -1,0 +1,59 @@
+
+.reddit-container {
+  background-color: #263238;
+  width: 100%;
+  height: auto;
+
+  hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    text-align: center;
+    padding-top: 1em;
+    color: ghostwhite;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+
+  .stories {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2em;
+
+    .story {
+      padding-top: .3em;
+      padding-bottom: .3em;
+
+      a {
+        font-size: .9em;
+        color: snow;
+
+        &:hover {
+          color: $highlight-color;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media(min-width: 1200px) {
+  .reddit-container {
+    width: 50%;
+    float: left;
+    margin-top: 30em;
+    height: 29em;
+
+    .stories {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+
+}
