@@ -25,10 +25,7 @@ class PictureOfTheDay extends Component {
         {tag}
 
         {Object.keys(data).map((key) => (
-          <div>
-            <p>{data[key].title}</p>
-            <p>{data[key].explanation}</p>
-          </div>
+          <p> {data[key]} </p>
         ))}
 
       </div>
