@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .header {
   width: calc(100% - 50px);
-  height: 75px;
+  height: 50px;
   background-color: #1E88E5;
   color: #F5F5F5;
   display: flex;
@@ -15,8 +15,8 @@
       color: white;
       padding: 0 10px;
       font-size: 1.2em; }
-    .header .nav-links .nav-link:hover {
-      text-decoration: underline; }
+      .header .nav-links .nav-link:hover {
+        color: #FFC107; }
   .header .menu-btn {
     display: none;
     margin-left: auto;
@@ -151,7 +151,8 @@ a {
   width: 80%;
   height: auto;
   margin: auto;
-  margin-bottom: 10em; }
+  margin-bottom: 10em;
+  margin-top: 5em; }
   .container .iframe-container {
     margin-left: auto;
     margin-right: auto;

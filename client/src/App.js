@@ -5,6 +5,7 @@ import Footer from './Footer';
 import PictureOfTheDay from './PictureOfTheDay';
 import Reddit from './Reddit';
 import StackExchange from './StackExchange';
+import SpaceX from './SpaceX';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <div className="App">
         <Header />
          <PictureOfTheDay />
+         <SpaceX />
          <Reddit subreddit="NASA" />
          <Reddit subreddit="SpaceX" />
         <Footer />
