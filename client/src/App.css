@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .header {
@@ -154,6 +152,11 @@ a {
   height: auto;
   margin: auto;
   margin-bottom: 10em; }
+  .container .iframe-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 2em; }
   .container h2, .container h3 {
     text-align: center; }
   .container h3 {
@@ -172,7 +175,7 @@ a {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.4; }
+    line-height: 1.6; }
 
 .reddit-container {
   background-color: #263238;
@@ -211,4 +214,3 @@ a {
     .reddit-container .stories {
       width: 90%;
       margin: auto; } }
->>>>>>> 002a0c3a1b5fb6153cdb1263def4ad62848d6aef
