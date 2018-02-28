@@ -12,11 +12,10 @@ class PictureOfTheDay extends Component {
     const media = this.props.pod.podData.url;
     // generates html tag from media type
     const tag = this.props.pod.podData.media_type === "video" ?
-                  <iframe type="text/html"
-                          width="600"
+                  <iframe className="daily-media" type="text/html"
                           height="400"
                           src={media} /> :
-                   <img src={media}/>
+                   <img className="daily-media" src={media}/>
 
     const data = pod.podData;
     const d = new Date();

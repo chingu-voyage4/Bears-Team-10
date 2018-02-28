@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .header {
   width: calc(100% - 50px);
-  height: 50px;
+  height: 75px;
   background-color: #1E88E5;
   color: #F5F5F5;
   display: flex;
@@ -149,22 +149,20 @@ a {
 
 .container {
   width: 80%;
-  height: auto;
-  margin: auto;
-  margin-bottom: 10em;
-  margin-top: 5em; }
+  margin: 40px auto; }
   .container .iframe-container {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 2em; }
-    .container .iframe-container img {
-      max-width: 600px;
-      height: auto; }
+    padding: 2em;
+    max-width: 600px; }
+    .container .iframe-container .daily-media {
+      width: 100%; }
   .container h2, .container h3 {
     text-align: center; }
-  .container h3 {
-    padding-top: 1em; }
+  .container h2 {
+    line-height: 1.4;
+    padding-bottom: 15px; }
   .container hr {
     width: 60%; }
   .container .description img {
@@ -179,7 +177,12 @@ a {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6; }
+    line-height: 1.6;
+    text-align: center; }
+
+@media (max-width: 767px) {
+  .container .description p {
+    width: 100%; } }
 
 .reddit-container {
   background-color: #263238;
