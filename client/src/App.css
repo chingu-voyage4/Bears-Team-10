@@ -1,0 +1,214 @@
+<<<<<<< HEAD
+=======
+@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.header {
+  width: calc(100% - 50px);
+  height: 75px;
+  background-color: #1E88E5;
+  color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 0 25px; }
+  .header .nav-links {
+    margin-left: auto;
+    display: flex; }
+    .header .nav-links .nav-link {
+      color: white;
+      padding: 0 10px;
+      font-size: 1.2em; }
+    .header .nav-links .nav-link:hover {
+      text-decoration: underline; }
+  .header .menu-btn {
+    display: none;
+    margin-left: auto;
+    padding-right: 20px; }
+
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    padding: 0; }
+    .header .header-title {
+      padding-left: 10px; }
+    .header .nav-links {
+      display: none; }
+    .header .menu-btn {
+      display: block; } }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, p {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.25em;
+  font-weight: 400;
+  line-height: 1.25em; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Fjalla One', 'Arial', sans-serif; }
+
+h1 {
+  font-size: 1.8em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.1em; }
+
+a {
+  text-decoration: none; }
+
+.Footer {
+  width: 100%;
+  background-color: #1E88E5;
+  color: #F5F5F5;
+  clear: both; }
+  .Footer .container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 30px 0 50px 0; }
+  .Footer .footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    .Footer .footer-section h3 {
+      padding-bottom: 10px;
+      font-size: 2em;
+      text-align: center; }
+  .Footer li {
+    padding-top: 1.2em; }
+  .Footer a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .Footer a:hover {
+      color: #FFC107; }
+
+@media (max-width: 767px) {
+  .Footer .container {
+    flex-direction: column; }
+  .Footer .footer-section {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; }
+    .Footer .footer-section h3 {
+      text-align: center; } }
+
+.container {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10em; }
+  .container h2, .container h3 {
+    text-align: center; }
+  .container h3 {
+    padding-top: 1em; }
+  .container hr {
+    width: 60%; }
+  .container .description img {
+    max-width: 600px;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1em; }
+  .container .description p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4; }
+
+.reddit-container {
+  background-color: #263238;
+  width: 100%;
+  height: auto; }
+  .reddit-container hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em; }
+  .reddit-container h3 {
+    text-align: center;
+    padding-top: 1em;
+    color: ghostwhite;
+    line-height: 1.3;
+    font-weight: 400; }
+  .reddit-container .stories {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2em; }
+    .reddit-container .stories .story {
+      padding-top: .3em;
+      padding-bottom: .3em; }
+      .reddit-container .stories .story a {
+        font-size: .9em;
+        color: snow; }
+        .reddit-container .stories .story a:hover {
+          color: #FFC107; }
+
+@media (min-width: 1200px) {
+  .reddit-container {
+    width: 50%;
+    float: left;
+    margin-top: 30em;
+    height: 29em; }
+    .reddit-container .stories {
+      width: 90%;
+      margin: auto; } }
+>>>>>>> 002a0c3a1b5fb6153cdb1263def4ad62848d6aef
