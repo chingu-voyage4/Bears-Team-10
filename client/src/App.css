@@ -158,6 +158,9 @@ a {
     margin-right: auto;
     text-align: center;
     padding: 2em; }
+    .container .iframe-container img {
+      max-width: 600px;
+      height: auto; }
   .container h2, .container h3 {
     text-align: center; }
   .container h3 {

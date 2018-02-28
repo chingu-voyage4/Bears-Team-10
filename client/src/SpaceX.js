@@ -13,11 +13,11 @@ class SpaceX extends Component {
 
   render() {
     const {rockets} = this.props;
-    //console.log(rockets);
 
     return (
       <div className="container">
         <h2>SpaceX Info</h2>
+
       </div>
     );
   }
