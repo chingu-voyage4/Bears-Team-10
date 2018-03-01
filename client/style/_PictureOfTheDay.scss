@@ -4,6 +4,19 @@
   height: auto;
   margin: auto;
   margin-bottom: 10em;
+  margin-top: 5em;
+
+  .iframe-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 2em;
+
+    img {
+      max-width: 600px;
+      height: auto;
+    }
+  }
 
   h2, h3 {
     text-align: center;
@@ -32,7 +45,7 @@
       width: 60%;
       margin-left: auto;
       margin-right: auto;
-      line-height: 1.4;
+      line-height: 1.6;
     }
   }
 }
