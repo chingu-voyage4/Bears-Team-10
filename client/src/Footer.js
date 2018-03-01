@@ -20,11 +20,11 @@ class Footer extends Component {
           <li><a href="#">Github</a></li>
         </ul>
         <ul className="footer-section">
-          <h3>Blah</h3>
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          <li><a href="#">Four</a></li>
+          <h3>Team</h3>
+            <li><a href="https://github.com/michaelgee22" target="_blank">michaelgee22</a></li>
+            <li><a href="https://github.com/Nicknyr" target="_blank">nicknyr</a></li>
+            <li><a href="https://github.com/sam4815" target="_blank">sam4815</a></li>
+            <li><a href="https://github.com/SharpEleven91" target="_blank">sharpeleven11</a></li>
         </ul>
         </div>
       </div>

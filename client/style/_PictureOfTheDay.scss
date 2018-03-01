@@ -1,20 +1,16 @@
-
 .container {
   width: 80%;
-  height: auto;
-  margin: auto;
-  margin-bottom: 10em;
-  margin-top: 5em;
+  margin: 40px auto;
 
   .iframe-container {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     padding: 2em;
+    max-width: 600px;
 
-    img {
-      max-width: 600px;
-      height: auto;
+    .daily-media {
+      width: 100%;
     }
   }
 
@@ -22,8 +18,9 @@
     text-align: center;
   }
 
-  h3 {
-    padding-top: 1em;
+  h2 {
+    line-height: 1.4;
+    padding-bottom: 15px;
   }
 
   hr {
@@ -46,6 +43,17 @@
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .container {
+    .description {
+      p {
+        width: 100%;
+      }
     }
   }
 }
