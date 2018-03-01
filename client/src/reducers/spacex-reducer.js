@@ -13,12 +13,12 @@ export default function reducer (state={
     case "FETCH_SPACEX_ROCKETS_REJECTED": {
       return {...state, fetching: false, error: action.payload}
     }
-    case "FETCH_SPACEX_COMPANY_FULFILLED": {
+    case "FETCH_SPACEX_ROCKETS_FULFILLED": {
       return {
         ...state,
         fetching: false,
         fetched: true,
-        podData: action.payload
+        spacexData: action.payload
       }
     }
     case "FETCH_SPACEX_COMPANY": {

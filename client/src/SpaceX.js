@@ -9,15 +9,14 @@ import {fetchPastLaunches} from './actions/spacex-action';
 class SpaceX extends Component {
   componentDidMount() {
     this.props.fetchRockets();
+    console.log(this.props.rockets);
   }
 
   render() {
-    const {rockets} = this.props;
-
+    const {rockets} = this.props.rockets;
     return (
       <div className="container">
         <h2>SpaceX Info</h2>
-
       </div>
     );
   }
@@ -29,7 +28,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = state => ({
-  rockets: state.rockets
+  rockets: state.spacex.spacexData
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpaceX);
