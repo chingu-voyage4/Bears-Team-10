@@ -8,12 +8,14 @@ import StackExchange from './StackExchange';
 import SpaceX from './SpaceX';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Mapbox from './map';
+import Example from './Searchbar';
 
 class App extends Component {
   render() {
     return (
       <div>
       <Header />
+      <Example />
       <Router>
         <Switch>
           <Route path="/pictureoftheday" component={PictureOfTheDay}/>
