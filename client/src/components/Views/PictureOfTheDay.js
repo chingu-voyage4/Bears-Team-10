@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import {fetchPOD} from './actions/pod-action';
+import { connect } from 'react-redux';
+import { fetchPOD } from '../../actions/pod-action';
 
 class PictureOfTheDay extends Component {
   componentDidMount() {

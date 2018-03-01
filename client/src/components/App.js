@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from './Header';
-import Footer from './Footer';
-import PictureOfTheDay from './PictureOfTheDay';
-import Reddit from './Reddit';
-import StackExchange from './StackExchange';
-import SpaceX from './SpaceX';
+import Header from './Layout/Header';
+import Footer from './Layout/Footer';
 
-import Mapbox from './map';
+import PictureOfTheDay from './Views/PictureOfTheDay';
+import SpaceX from './Views/SpaceX';
+import Reddit from './Views/Reddit';
+import StackExchange from './Views/StackExchange';
+
 import './App.css';
 
 class App extends Component {
