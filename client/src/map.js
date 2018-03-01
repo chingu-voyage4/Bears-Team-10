@@ -18,9 +18,11 @@ import axios from 'axios';
     }
 
   componentWillMount() {
-    axios.get(url).then(res => {
-    this.setState({data: res.data})
-    }).catch(err => {
+    axios.get(url)
+      .then(res => {
+        this.setState({data: res.data})
+      })
+      .catch(err => {
       console.log('error')
     })
   }
@@ -53,7 +55,6 @@ import axios from 'axios';
                     return ( <p key={i}>{elem}</p>)
                   })}
                 </span>
-
                 </Popup>
                   <Circle
                     center={{lat:elem.location.latitude, lng: elem.location.longitude}}

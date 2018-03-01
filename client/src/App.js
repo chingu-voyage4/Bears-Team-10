@@ -20,7 +20,6 @@ class App extends Component {
           <Route path="/spacex" component={SpaceX}/>
         </Switch>
       </Router>
-      <Mapbox />
       <Footer />
       </div>
     );
