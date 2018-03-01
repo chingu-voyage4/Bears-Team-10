@@ -7,6 +7,7 @@ import Reddit from './Reddit';
 import StackExchange from './StackExchange';
 import SpaceX from './SpaceX';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Mapbox from './map';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path="/pictureoftheday" component={PictureOfTheDay}/>
         </Switch>
       </Router>
+      <Mapbox />
       <Footer />
       </div>
     );
