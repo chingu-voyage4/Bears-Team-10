@@ -17,6 +17,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/pictureoftheday" component={PictureOfTheDay}/>
+          <Route path="/spacex" component={SpaceX}/>
         </Switch>
       </Router>
       <Mapbox />
