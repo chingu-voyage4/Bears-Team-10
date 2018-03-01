@@ -14,7 +14,7 @@ class SpaceX extends Component {
   render() {
     const rockets = this.props.rockets;
     return (
-      <div className="container">
+      <div className="route-container">
         <h2>SpaceX Info</h2>
         <tr>
           <td>Name</td>

@@ -22,14 +22,14 @@ class PictureOfTheDay extends Component {
     const date = d.toDateString();
 
     return (
-      <div className="container">
+      <div className="route-container potd-container">
         <h2>Picture of the Day for {date}</h2>
         <h3>{data.title}</h3>
         <div className="iframe-container">
           {tag}
         </div>
         <div className="description">
-          <p>{data.explanation}</p>
+          <p>{data.explanation}</p>      
         </div>
 
       </div>

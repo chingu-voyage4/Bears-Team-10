@@ -10,10 +10,11 @@ class Header extends Component {
         </Link>
 
         <ul className="nav-links">
-          <li><a className="nav-link" href="#">Link1</a></li>
-          <li><a className="nav-link" href="#">Link2</a></li>
-          <li><a className="nav-link" href="#">Link3</a></li>
-          <li><a className="nav-link" href="/pictureoftheday">Picture of the Day</a></li>
+          <li><Link to="/map" className="nav-link">Map</Link></li>
+          <li><Link to="/pictureoftheday" className="nav-link">POTD</Link></li>
+          <li><Link to="/reddit" className="nav-link">Reddit</Link></li>
+          <li><Link to="/spacex" className="nav-link">Space X</Link></li>
+          <li><Link to="/stack-exchange" className="nav-link">Stack Exchange</Link></li>
         </ul>
 
         <div className="menu-btn">BTN</div>

@@ -25,7 +25,7 @@ export default class StackExchange extends Component {
 
   render() {
     return (
-      <div>
+      <div className="route-container">
         <h1>Stack Exchange Data</h1>
         <ul>
 

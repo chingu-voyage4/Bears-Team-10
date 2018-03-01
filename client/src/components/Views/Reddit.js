@@ -13,6 +13,8 @@ export default class Reddit extends Component {
 
   // ${this.props.subreddit}
   componentDidMount() {
+    console.log(this.props);
+    
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.reddit.com/r/${this.props.subreddit}.json?&limit=8`)
       .then(res => {
         const data = res.data.data.children.map(obj => obj.data);
@@ -25,7 +27,7 @@ export default class Reddit extends Component {
   render() {
     return (
       <div className="reddit-container">
-        <h3>Top {this.props.subreddit} Stories from Reddit</h3>
+        <h3 id="reddit-title">Top {this.props.subreddit} Stories from Reddit</h3>
         <hr />
         <div className="stories">
         <ul>
