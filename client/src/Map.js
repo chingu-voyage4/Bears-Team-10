@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, Marker, Tooltip,Popup, Circle} from 'react-leaflet';
+import { Map, TileLayer, Marker, Tooltip,Popup, Circle, CircleMarker} from 'react-leaflet';
 import axios from 'axios';
+import L from 'leaflet';
+import { icon } from './Icon';
 
   const url = 'https://api.spacexdata.com/v2/launchpads';
   const nasaURL = 'https://data.nasa.gov/resource/gvk9-iz74.json';
@@ -41,8 +43,6 @@ import axios from 'axios';
   render() {
     const {spacexData} = this.state;
     const {nasaData} = this.state;
-    console.log(spacexData);
-    console.log(nasaData);
 
     return (
       <div>
@@ -59,7 +59,8 @@ import axios from 'axios';
             return (
               <Marker
                 key={i}
-                position={{lat:elem.location.latitude, lng: elem.location.longitude}}>
+                position={{lat:elem.location.latitude, lng: elem.location.longitude}}
+                icon={ icon }>
               <Popup>
                 <span>
                   <img src={require('./images/spacex-small.png')} width="150"/><br />
@@ -69,11 +70,11 @@ import axios from 'axios';
                   <h5>Details:</h5><span>{elem.details}</span><br />
                 </span>
                 </Popup>
-                  <Circle
-                    center={{lat:elem.location.latitude, lng: elem.location.longitude}}
-                    fillColor="blue"
-                    radius={10000}/>
-                </Marker>
+                <Circle
+                  center={{lat:elem.location.latitude, lng: elem.location.longitude}}
+                  fillColor="blue"
+                  radius={10000}/>
+              </Marker>
                 )
               })}
 
@@ -92,10 +93,10 @@ import axios from 'axios';
                       <h5>Details:</h5><span>{elem.facility}</span>
                     </span>
                   </Popup>
-                      <Circle
-                        center={{lat:elem.location.latitude, lng: elem.location.longitude}}
-                        fillColor="blue"
-                        radius={10000}/>
+                    <Circle
+                      center={{lat:elem.location.latitude, lng: elem.location.longitude}}
+                      fillColor="blue"
+                      radius={10000}/>
                   </Marker>
                 )
               })}
