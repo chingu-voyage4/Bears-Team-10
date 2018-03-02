@@ -13,7 +13,7 @@ class RedditFeed extends Component {
 
   // ${this.props.subreddit}
   componentDidMount() {
-    axios.get(`https://cors-anywhere.herokuapp.com/http://www.reddit.com/r/${this.props.subreddit}.json?&limit=8`)
+    axios.get(`https://cors-anywhere.herokuapp.com/http://www.reddit.com/r/${this.props.subreddit}.json?&limit=6`)
       .then(res => {
         const data = res.data.data.children.map(obj => obj.data);
         this.setState({redditData: data});
