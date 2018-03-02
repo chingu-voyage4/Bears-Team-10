@@ -7,7 +7,7 @@ import Reddit from './Reddit';
 import StackExchange from './StackExchange';
 import SpaceX from './SpaceX';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Mapbox from './map';
+import Mapbox from './Map';
 import Example from './Searchbar';
 
 class App extends Component {
@@ -22,6 +22,9 @@ class App extends Component {
           <Route path="/spacex" component={SpaceX}/>
         </Switch>
       </Router>
+      <Mapbox />
+      <Reddit subreddit="NASA" />
+      <Reddit subreddit="SpaceX" />
       <Footer />
       </div>
     );

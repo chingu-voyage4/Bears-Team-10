@@ -80,7 +80,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body, p {
+body, p, span {
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 1em;
   font-weight: 500;
@@ -221,3 +221,13 @@ a {
     .reddit-container .stories {
       width: 90%;
       margin: auto; } }
+
+.leaflet-popup-content-wrapper {
+  background-color: snow; }
+  .leaflet-popup-content-wrapper span {
+    font-size: 1.1em;
+    line-height: 1.5; }
+  .leaflet-popup-content-wrapper h3 {
+    padding-bottom: 0; }
+  .leaflet-popup-content-wrapper h5 {
+    padding-top: .5em; }
