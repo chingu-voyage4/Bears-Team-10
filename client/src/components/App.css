@@ -151,6 +151,11 @@ a {
   .leaflet-popup-content-wrapper h5 {
     padding-top: .5em; }
 
+.leaflet-div-icon {
+  background: none;
+  border: none;
+  margin: 10px; }
+
 .header {
   width: calc(100% - 50px);
   height: 75px;
