@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, Marker, Tooltip,Popup, Circle, CircleMarker} from 'react-leaflet';
+import { Map, TileLayer, Marker, Tooltip,Popup, Circle} from 'react-leaflet';
 import axios from 'axios';
-import L from 'leaflet';
-import { icon } from './Icon';
 
   const url = 'https://api.spacexdata.com/v2/launchpads';
   const nasaURL = 'https://data.nasa.gov/resource/gvk9-iz74.json';
@@ -43,6 +41,8 @@ import { icon } from './Icon';
   render() {
     const {spacexData} = this.state;
     const {nasaData} = this.state;
+    console.log(spacexData);
+    console.log(nasaData);
 
     return (
       <div>
@@ -59,22 +59,21 @@ import { icon } from './Icon';
             return (
               <Marker
                 key={i}
-                position={{lat:elem.location.latitude, lng: elem.location.longitude}}
-                icon={ icon }>
+                position={{lat:elem.location.latitude, lng: elem.location.longitude}}>
               <Popup>
                 <span>
-                  <img src={require('./images/spacex-small.png')} width="150"/><br />
+                  <img src={require('./public/spacex-small.png')} width="150"/><br />
                   <h4>{elem.full_name}</h4>
                   <h5>Location:</h5><span>{elem.location.name}, {elem.location.region}</span>
                   <h5>Status:</h5><span>{elem.status}</span><br />
                   <h5>Details:</h5><span>{elem.details}</span><br />
                 </span>
                 </Popup>
-                <Circle
-                  center={{lat:elem.location.latitude, lng: elem.location.longitude}}
-                  fillColor="blue"
-                  radius={10000}/>
-              </Marker>
+                  <Circle
+                    center={{lat:elem.location.latitude, lng: elem.location.longitude}}
+                    fillColor="blue"
+                    radius={10000}/>
+                </Marker>
                 )
               })}
 
@@ -86,17 +85,17 @@ import { icon } from './Icon';
                     position={{lat:elem.location.latitude, lng: elem.location.longitude}}>
                   <Popup>
                     <span>
-                      <img src={require('./images/NASA.png')}/><br />
+                      <img src={require('./public/NASA.png')}/><br />
                       <h4>{elem.center}</h4>
                       <h5>Location:</h5><span>{elem.city}, {elem.state}</span><br />
                       <h5>Status:</h5><span>{elem.occupied}</span><br />
                       <h5>Details:</h5><span>{elem.facility}</span>
                     </span>
                   </Popup>
-                    <Circle
-                      center={{lat:elem.location.latitude, lng: elem.location.longitude}}
-                      fillColor="blue"
-                      radius={10000}/>
+                      <Circle
+                        center={{lat:elem.location.latitude, lng: elem.location.longitude}}
+                        fillColor="blue"
+                        radius={10000}/>
                   </Marker>
                 )
               })}
