@@ -62,7 +62,7 @@ import axios from 'axios';
                 position={{lat:elem.location.latitude, lng: elem.location.longitude}}>
               <Popup>
                 <span>
-                  <img src={require('./public/spacex-small.png')} width="150"/><br />
+                  <img src={require('./images/spacex-small.png')} width="150"/><br />
                   <h4>{elem.full_name}</h4>
                   <h5>Location:</h5><span>{elem.location.name}, {elem.location.region}</span>
                   <h5>Status:</h5><span>{elem.status}</span><br />
@@ -85,7 +85,7 @@ import axios from 'axios';
                     position={{lat:elem.location.latitude, lng: elem.location.longitude}}>
                   <Popup>
                     <span>
-                      <img src={require('./public/NASA.png')}/><br />
+                      <img src={require('./images/NASA.png')}/><br />
                       <h4>{elem.center}</h4>
                       <h5>Location:</h5><span>{elem.city}, {elem.state}</span><br />
                       <h5>Status:</h5><span>{elem.occupied}</span><br />
