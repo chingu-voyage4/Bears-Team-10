@@ -3,41 +3,6 @@
 .route-container {
   margin: 30px 0; }
 
-.header {
-  width: calc(100% - 50px);
-  height: 75px;
-  background-color: #1E88E5;
-  color: #F5F5F5;
-  display: flex;
-  align-items: center;
-  padding: 0 25px; }
-  .header .header-title {
-    color: white; }
-  .header .nav-links {
-    margin-left: auto;
-    display: flex; }
-    .header .nav-links .nav-link {
-      color: white;
-      padding: 0 10px;
-      font-size: 1.2em; }
-      .header .nav-links .nav-link:hover {
-        color: #FFC107; }
-  .header .menu-btn {
-    display: none;
-    margin-left: auto;
-    padding-right: 20px; }
-
-@media (max-width: 767px) {
-  .header {
-    width: 100%;
-    padding: 0; }
-    .header .header-title {
-      padding-left: 10px; }
-    .header .nav-links {
-      display: none; }
-    .header .menu-btn {
-      display: block; } }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -112,47 +77,6 @@ h4 {
 a {
   text-decoration: none; }
 
-.Footer {
-  width: 100%;
-  background-color: #1E88E5;
-  color: #F5F5F5;
-  clear: both; }
-  .Footer .container {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 0;
-    padding: 40px 0; }
-  .Footer .footer-section {
-    display: flex;
-    flex-direction: column;
-    width: 30%; }
-    .Footer .footer-section h3 {
-      padding-bottom: 10px;
-      font-size: 2em;
-      text-align: center; }
-  .Footer li {
-    padding-top: 1.2em; }
-  .Footer a {
-    color: #F5F5F5;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase; }
-    .Footer a:hover {
-      color: #FFC107; }
-
-@media (max-width: 767px) {
-  .Footer .container {
-    flex-direction: column;
-    padding: 15px 0; }
-  .Footer .footer-section {
-    padding: 20px 0;
-    width: 100%;
-    text-align: center; }
-    .Footer .footer-section h3 {
-      text-align: center; } }
-
 .potd-container {
   width: 100%; }
   .potd-container .iframe-container {
@@ -216,18 +140,6 @@ a {
         color: snow; }
         .reddit-container .stories .story a:hover {
           color: #FFC107; }
-<<<<<<< HEAD:client/src/components/App.css
-=======
-
-@media (min-width: 1200px) {
-  .reddit-container {
-    width: 50%;
-    float: left;
-    margin-top: 30em;
-    height: 29em; }
-    .reddit-container .stories {
-      width: 90%;
-      margin: auto; } }
 
 .leaflet-popup-content-wrapper {
   background-color: snow; }
@@ -238,4 +150,79 @@ a {
     padding-bottom: 0; }
   .leaflet-popup-content-wrapper h5 {
     padding-top: .5em; }
->>>>>>> 1ecc82af86457b81c6a2abc2a324e4d91cccf019:client/src/App.css
+
+.header {
+  width: calc(100% - 50px);
+  height: 75px;
+  background-color: #1E88E5;
+  color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  padding: 0 25px; }
+  .header .header-title {
+    color: white; }
+  .header .nav-links {
+    margin-left: auto;
+    display: flex; }
+    .header .nav-links .nav-link {
+      color: white;
+      padding: 0 10px;
+      font-size: 1.2em; }
+      .header .nav-links .nav-link:hover {
+        color: #FFC107; }
+  .header .menu-btn {
+    display: none;
+    margin-left: auto;
+    padding-right: 20px; }
+
+@media (max-width: 767px) {
+  .header {
+    width: 100%;
+    padding: 0; }
+    .header .header-title {
+      padding-left: 10px; }
+    .header .nav-links {
+      display: none; }
+    .header .menu-btn {
+      display: block; } }
+
+.Footer {
+  width: 100%;
+  background-color: #1E88E5;
+  color: #F5F5F5;
+  clear: both; }
+  .Footer .container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 40px 0; }
+  .Footer .footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+    .Footer .footer-section h3 {
+      padding-bottom: 10px;
+      font-size: 2em;
+      text-align: center; }
+  .Footer li {
+    padding-top: 1.2em; }
+  .Footer a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .Footer a:hover {
+      color: #FFC107; }
+
+@media (max-width: 767px) {
+  .Footer .container {
+    flex-direction: column;
+    padding: 15px 0; }
+  .Footer .footer-section {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center; }
+    .Footer .footer-section h3 {
+      text-align: center; } }
