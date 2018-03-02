@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-export default class Reddit extends Component {
+class RedditFeed extends Component {
   constructor (props) {
     super(props);
 
@@ -21,11 +21,10 @@ export default class Reddit extends Component {
       })
   }
 
-
   render() {
     return (
       <div className="reddit-container">
-        <h3>Top {this.props.subreddit} Stories from Reddit</h3>
+        <h3 id="reddit-title">Top {this.props.subreddit} Stories from Reddit</h3>
         <hr />
         <div className="stories">
         <ul>
@@ -38,3 +37,5 @@ export default class Reddit extends Component {
     );
   }
 }
+
+export default RedditFeed;
