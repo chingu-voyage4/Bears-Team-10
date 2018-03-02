@@ -85,7 +85,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body, p {
+body, p, span {
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 1em;
   font-weight: 500;
@@ -216,3 +216,26 @@ a {
         color: snow; }
         .reddit-container .stories .story a:hover {
           color: #FFC107; }
+<<<<<<< HEAD:client/src/components/App.css
+=======
+
+@media (min-width: 1200px) {
+  .reddit-container {
+    width: 50%;
+    float: left;
+    margin-top: 30em;
+    height: 29em; }
+    .reddit-container .stories {
+      width: 90%;
+      margin: auto; } }
+
+.leaflet-popup-content-wrapper {
+  background-color: snow; }
+  .leaflet-popup-content-wrapper span {
+    font-size: 1.1em;
+    line-height: 1.5; }
+  .leaflet-popup-content-wrapper h3 {
+    padding-bottom: 0; }
+  .leaflet-popup-content-wrapper h5 {
+    padding-top: .5em; }
+>>>>>>> 1ecc82af86457b81c6a2abc2a324e4d91cccf019:client/src/App.css

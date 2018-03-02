@@ -11,10 +11,6 @@
     npm install
     cd ..
 
-### Insert MongoDB URI into server/config/dev.js
-
-Enter the URI string (will I will send in slack channel) into the string to hook up the MongoDB database. After doing so, add *server/config/dev.js* to the .gitignore (the one not in the client folder) to hide this URI dev key from the github repo.
-
 ### Start the Local Development Server(s)
 
     npm run dev
