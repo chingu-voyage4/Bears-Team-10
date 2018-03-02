@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-export default class Reddit extends Component {
+class RedditFeed extends Component {
   constructor (props) {
     super(props);
 
@@ -13,8 +13,6 @@ export default class Reddit extends Component {
 
   // ${this.props.subreddit}
   componentDidMount() {
-    console.log(this.props);
-    
     axios.get(`https://cors-anywhere.herokuapp.com/http://www.reddit.com/r/${this.props.subreddit}.json?&limit=8`)
       .then(res => {
         const data = res.data.data.children.map(obj => obj.data);
@@ -22,7 +20,6 @@ export default class Reddit extends Component {
         //console.log(this.state.redditData);
       })
   }
-
 
   render() {
     return (
@@ -40,3 +37,5 @@ export default class Reddit extends Component {
     );
   }
 }
+
+export default RedditFeed;

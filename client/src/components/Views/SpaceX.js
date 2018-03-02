@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchRockets } from '../../actions/spacex-action';
-import { fetchCompanyData } from '../../actions/spacex-action';
-import { fetchLaunchPads } from '../../actions/spacex-action';
-import { fetchUpcomingLaunches } from '../../actions/spacex-action';
-import { fetchPastLaunches } from '../../actions/spacex-action';
+
+import { 
+  fetchRockets,
+  fetchCompanyData,
+  fetchLaunchPads,
+  fetchUpcomingLaunches,
+  fetchPastLaunches
+} from '../../actions/spacex-action';
 
 class SpaceX extends Component {
   componentDidMount() {
@@ -36,7 +39,6 @@ class SpaceX extends Component {
     );
   }
 }
-
 
 const mapDispatchToProps = dispatch => ({
   fetchRockets: () => dispatch(fetchRockets())

@@ -12,7 +12,6 @@ class Header extends Component {
         <ul className="nav-links">
           <li><Link to="/map" className="nav-link">Map</Link></li>
           <li><Link to="/pictureoftheday" className="nav-link">POTD</Link></li>
-          <li><Link to="/reddit" className="nav-link">Reddit</Link></li>
           <li><Link to="/spacex" className="nav-link">Space X</Link></li>
           <li><Link to="/stack-exchange" className="nav-link">Stack Exchange</Link></li>
         </ul>
