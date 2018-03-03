@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-.route-container {
-  margin: 30px 0; }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -125,7 +122,7 @@ a {
     margin-bottom: 1em; }
   .reddit-container #reddit-title {
     text-align: center;
-    padding-top: 1em;
+    padding-top: 3em;
     color: ghostwhite;
     line-height: 1.3;
     font-weight: 400; }
@@ -232,3 +229,92 @@ a {
     text-align: center; }
     .Footer .footer-section h3 {
       text-align: center; } }
+
+.react-autosuggest__container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em; }
+
+.react-autosuggest__input {
+  width: 95%;
+  height: 1.4em;
+  font-size: 1em; }
+
+.react-autosuggest__input--focused {
+  border: 2px solid #FFC107;
+  height: 1.4em;
+  font-size: 1em; }
+
+.react-autosuggest__suggestions-container {
+  background-color: #263238;
+  color: snow;
+  width: 100%; }
+
+@media (min-width: 1200px) {
+  .react-autosuggest__container {
+    width: 50%;
+    margin-top: 2em; } }
+
+.landing {
+  height: auto; }
+  .landing h1 {
+    text-align: center;
+    margin: 1em; }
+
+.main-content {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em; }
+  .main-content p {
+    line-height: 1.5;
+    color: darkslategrey;
+    font-weight: 500; }
+
+.features {
+  height: auto;
+  background-color: #1E88E5; }
+  .features h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: bolder;
+    color: #FFC107;
+    text-transform: uppercase;
+    padding-top: 1em; }
+  .features ul h3 {
+    text-align: center;
+    padding: .3em;
+    font-weight: bolder;
+    color: snow; }
+  .features ul li {
+    margin-bottom: 5em;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: snow; }
+  .features p {
+    line-height: 1.5; }
+
+@media (min-width: 1200px) {
+  .features ul {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    .features ul li {
+      display: inline-block;
+      width: 30%;
+      margin: 1em;
+      padding-bottom: 3em; }
+  .features p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em; }
+  .main-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+    height: 50em; } }
