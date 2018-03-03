@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Header from './Layout/Header';
 import Footer from './Layout/Footer';
-import RedditFeed from './Elements/redditFeed';
+import RedditFeed from './Elements/RedditFeed';
 
 import HomePage from './Views/HomePage';
 import MapPage from './Views/MapPage';
@@ -28,7 +28,7 @@ class App extends Component {
             <Route path="/stack-exchange" component={StackExchange} />
           </Switch>
 
-          <RedditFeed subreddit="NASA"/>
+          <RedditFeed subreddit="NASA" />
           <RedditFeed subreddit="SpaceX" />
 
           <Footer />
