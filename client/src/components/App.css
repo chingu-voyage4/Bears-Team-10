@@ -232,3 +232,26 @@ a {
     text-align: center; }
     .Footer .footer-section h3 {
       text-align: center; } }
+
+.spacex-header {
+  text-align: center; }
+
+.rockets-header {
+  margin-top: 20px;
+  text-align: center; }
+
+.rockets-container {
+  text-align: center;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center; }
+  .rockets-container .rocket {
+    overflow: hidden;
+    height: 22px;
+    transition: all 0.50s; }
+    .rockets-container .rocket .rocket-name {
+      text-decoration: none; }
+    .rockets-container .rocket:focus-within {
+      height: fit-content; }

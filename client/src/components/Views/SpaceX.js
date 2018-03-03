@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import Rocket from '../Elements/rocket';
 import { 
   fetchRockets,
   fetchCompanyData,
@@ -16,25 +16,16 @@ class SpaceX extends Component {
 
   render() {
     const rockets = this.props.rockets;
+    console.log(rockets);
     return (
       <div className="route-container">
-        <h2>SpaceX Info</h2>
-        <tr>
-          <td>Name</td>
-          <td>Weight</td>
-          <td>First Launch</td>
-          <td>Country</td>
-          <td>Cost Per Launch</td>
-        </tr>
+        <h2 className="spacex-header">SpaceX Info</h2>
+        <h3 className="rockets-header">Rockets</h3>
+        <div className="rockets-container">
         {rockets.map(function(r) {
-          return <tr> 
-                  <td>{r.name}</td>
-                  <td>{r.mass.lb} lbs</td>
-                  <td>{r.first_flight}</td>
-                  <td>{r.country}</td>
-                  <td>{r.cost_per_launch}</td>
-                </tr>;
+          return <Rocket key={r.id} name={r.name} mass={r.mass.lb} firstFlight={r.first_flight} country={r.country} cost={r.cost_per_launch} successRate={r.success_rate_pct}/>
         })}
+        </div>
       </div>
     );
   }
