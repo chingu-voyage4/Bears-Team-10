@@ -169,7 +169,8 @@ a {
     color: white; }
   .header .nav-links {
     margin-left: auto;
-    display: flex; }
+    display: flex;
+    margin-right: 7px; }
     .header .nav-links .nav-link {
       color: white;
       padding: 0 10px;
@@ -190,7 +191,9 @@ a {
     .header .nav-links {
       display: none; }
     .header .menu-btn {
-      display: block; } }
+      display: block; }
+    .header .menu-btn:hover {
+      cursor: pointer; } }
 
 .Footer {
   width: 100%;
