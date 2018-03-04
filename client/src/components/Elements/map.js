@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Tooltip,Popup, Circle, CircleMarker} from 'react-leaflet';
 import axios from 'axios';
 import L from 'leaflet';
-import { icon } from './icon';
+import { icon } from './Icon';
 
   /* Renders circle. Put inside <Marker></Marker>   
     <Circle

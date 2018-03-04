@@ -1,101 +1,78 @@
+.homepage-section {
+  width: 80%;
+  margin: 2em auto;
 
-.route-container {
-}
-
-.landing {
-  height: auto;
-
-  h1 {
+  .homepage-title {
     text-align: center;
     margin: 1em;
+    font-size: 2em;
   }
-}
 
-.main-content {
-  width: 85%;
-  //margin-top: 5em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5em;
-
-
-  p {
+  .homepage-paragraph {
     line-height: 1.5;
     color: darkslategrey;
     font-weight: 500;
+    padding: 1em 0;
   }
 }
 
 .features {
   height: auto;
   background-color: $primary-color;
+  padding: 2em 0;
 
-  h2 {
+  #features-title {
+    display: block;
     text-align: center;
-    margin-bottom: 2em;
     font-weight: bolder;
     color: $highlight-color;
     text-transform: uppercase;
-    padding-top: 1em;
+    font-size: 1.8em;
+
   }
 
-  ul {
-    h3 {
-      text-align: center;
-      padding: .3em;
-      font-weight: bolder;
-      color: snow;
-    }
+  #features-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1.5em 0;
 
-    li {
-      margin-bottom: 5em;
-      width: 60%;
-      margin-left: auto;
-      margin-right: auto;
+    .feature-item {
+      width: 30%;
       text-align: center;
       color: snow;
+      float: left;
+
+      .feature-item-title {
+        text-align: center;
+        font-size: 1.7em;
+        padding: .5em 0;
+        font-weight: bolder;
+        color: snow;
+      }
     }
   }
 
-  p {
+  .feature-item-text {
     line-height: 1.5;
+    padding: .5em 2em 0 2em;
   }
 }
 
-
-
-@media(min-width: 1200px) {
+@media(max-width: 767px) {
   .features {
-    ul {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
+    #features-list {
+      display: flex;
+      flex-direction: column;
 
-
-      li {
-        display: inline-block;
-        width: 30%;
-        margin: 1em;
-        padding-bottom: 3em;
+      .feature-item {
+        width: 100%;
+        padding: 1em 0;
       }
     }
 
-    p {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      padding: .5em;
+    .feature-item-text {
+      padding: .5em 1.5em 0 1.5em;
     }
   }
-
-  .main-content {
-    width: 50%;
-    //margin-top: 5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5em;
-    height: 50em;
-  }
-
-
 }

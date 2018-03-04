@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.route-container {
+  margin: 30px 0; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -166,7 +169,8 @@ a {
     color: white; }
   .header .nav-links {
     margin-left: auto;
-    display: flex; }
+    display: flex;
+    margin-right: 7px; }
     .header .nav-links .nav-link {
       color: white;
       padding: 0 10px;
@@ -187,42 +191,43 @@ a {
     .header .nav-links {
       display: none; }
     .header .menu-btn {
-      display: block; } }
+      display: block; }
+    .header .menu-btn:hover {
+      cursor: pointer; } }
 
 .Footer {
   width: 100%;
   background-color: #1E88E5;
   color: #F5F5F5;
   clear: both; }
-  .Footer .container {
+  .Footer .footer-container {
     display: flex;
     justify-content: space-around;
     width: 90%;
     text-align: center;
-    margin-bottom: 0;
-    padding: 40px 0; }
+    margin: 0 auto;
+    padding: 3em 0; }
   .Footer .footer-section {
     display: flex;
     flex-direction: column;
     width: 30%; }
-    .Footer .footer-section h3 {
-      padding-bottom: 10px;
+    .Footer .footer-section .footer-title {
       font-size: 2em;
+      margin-bottom: .3em;
       text-align: center; }
   .Footer li {
     padding-top: 1.2em; }
   .Footer a {
     color: #F5F5F5;
     text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase; }
+    font-weight: bold; }
     .Footer a:hover {
       color: #FFC107; }
 
 @media (max-width: 767px) {
-  .Footer .container {
+  .Footer .footer-container {
     flex-direction: column;
-    padding: 15px 0; }
+    padding: .7em 0; }
   .Footer .footer-section {
     padding: 20px 0;
     width: 100%;
@@ -256,65 +261,56 @@ a {
     width: 50%;
     margin-top: 2em; } }
 
-.landing {
-  height: auto; }
-  .landing h1 {
+.homepage-section {
+  width: 80%;
+  margin: 2em auto; }
+  .homepage-section .homepage-title {
     text-align: center;
-    margin: 1em; }
-
-.main-content {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5em; }
-  .main-content p {
+    margin: 1em;
+    font-size: 2em; }
+  .homepage-section .homepage-paragraph {
     line-height: 1.5;
     color: darkslategrey;
-    font-weight: 500; }
+    font-weight: 500;
+    padding: 1em 0; }
 
 .features {
   height: auto;
-  background-color: #1E88E5; }
-  .features h2 {
+  background-color: #1E88E5;
+  padding: 2em 0; }
+  .features #features-title {
+    display: block;
     text-align: center;
-    margin-bottom: 2em;
     font-weight: bolder;
     color: #FFC107;
     text-transform: uppercase;
-    padding-top: 1em; }
-  .features ul h3 {
-    text-align: center;
-    padding: .3em;
-    font-weight: bolder;
-    color: snow; }
-  .features ul li {
-    margin-bottom: 5em;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: snow; }
-  .features p {
-    line-height: 1.5; }
-
-@media (min-width: 1200px) {
-  .features ul {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto; }
-    .features ul li {
-      display: inline-block;
+    font-size: 1.8em; }
+  .features #features-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1.5em 0; }
+    .features #features-list .feature-item {
       width: 30%;
-      margin: 1em;
-      padding-bottom: 3em; }
-  .features p {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: .5em; }
-  .main-content {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5em;
-    height: 50em; } }
+      text-align: center;
+      color: snow;
+      float: left; }
+      .features #features-list .feature-item .feature-item-title {
+        text-align: center;
+        font-size: 1.7em;
+        padding: .5em 0;
+        font-weight: bolder;
+        color: snow; }
+  .features .feature-item-text {
+    line-height: 1.5;
+    padding: .5em 2em 0 2em; }
+
+@media (max-width: 767px) {
+  .features #features-list {
+    display: flex;
+    flex-direction: column; }
+    .features #features-list .feature-item {
+      width: 100%;
+      padding: 1em 0; }
+  .features .feature-item-text {
+    padding: .5em 1.5em 0 1.5em; } }
