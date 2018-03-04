@@ -4,7 +4,7 @@ import axios from 'axios';
 import L from 'leaflet';
 import { icon } from './Icon';
 
-  /* Renders circle. Put inside <Marker></Marker>   
+  /* Renders circle. Put inside <Marker></Marker>
     <Circle
       center={{lat:elem.location.latitude, lng: elem.location.longitude}}
       fillColor="blue"
