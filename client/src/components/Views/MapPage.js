@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Mapbox from '../Elements/map';
+import Mapbox from '../Elements/Map';
 
 const Homepage = props => (
   <div>

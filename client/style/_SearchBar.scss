@@ -1,0 +1,32 @@
+.react-autosuggest__container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.react-autosuggest__input {
+  width: 95%;
+  height: 1.4em;
+  font-size: 1em;
+}
+
+.react-autosuggest__input--focused {
+  border: 2px solid $highlight-color;
+  height: 1.4em;
+  font-size: 1em;
+}
+
+.react-autosuggest__suggestions-container {
+  background-color: #263238;
+  color: snow;
+  width: 100%;
+}
+
+
+@media(min-width: 1200px) {
+  .react-autosuggest__container {
+    width: 50%;
+    margin-top: 2em;
+  }
+}

@@ -13,4 +13,4 @@ const icon = new L.Icon({
   className: 'leaflet-div-icon'
 });
 
-export {icon};
+export { icon };
