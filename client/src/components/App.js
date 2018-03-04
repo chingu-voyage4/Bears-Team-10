@@ -10,7 +10,6 @@ import PictureOfTheDay from './Views/PictureOfTheDay';
 import RedditFeed from './Elements/RedditFeed';
 import SpaceX from './Views/SpaceX';
 import StackExchange from './Views/StackExchange';
-import Searchbar from './Elements/searchBar';
 import './App.css';
 
 class App extends Component {

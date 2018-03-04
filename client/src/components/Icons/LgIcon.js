@@ -1,9 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Icon = props => (
+const LgIcon = props => (
   <svg width="100" height="100" viewBox="0 0 24 24">
-    <path fill="#fff" d={props.icon} />
+    <path fill={props.color} d={props.icon} />
   </svg>
 );
 
-export default Icon;
+LgIcon.defaultProps = {
+  color: '#fff'
+}
+
+LgIcon.propTypes = {
+  d: PropTypes.string.isRequired,
+  color: PropTypes.string
+}
+
+export default LgIcon;
