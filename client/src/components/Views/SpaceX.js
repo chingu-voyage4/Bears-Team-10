@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Rocket from '../Elements/rocket';
+import Rocket from '../Elements/Rocket';
 import { 
   fetchRockets,
   fetchCompanyData,
