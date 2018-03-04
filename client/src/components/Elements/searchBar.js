@@ -11,7 +11,7 @@ const languages = [
     name: 'Elm',
     year: 2012
   },
-  
+
 ];
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
@@ -36,7 +36,7 @@ const renderSuggestion = suggestion => (
   </div>
 );
 
-class Example extends React.Component {
+class SearchBar extends Component {
   constructor() {
     super();
 
@@ -77,7 +77,7 @@ class Example extends React.Component {
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
-      placeholder: 'Type a programming language',
+      placeholder: 'Search for space related topic...',
       value,
       onChange: this.onChange
     };
@@ -96,4 +96,4 @@ class Example extends React.Component {
   }
 }
 
-export default Example;
+export default SearchBar;

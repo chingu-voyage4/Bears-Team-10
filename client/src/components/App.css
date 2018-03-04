@@ -125,7 +125,7 @@ a {
     margin-bottom: 1em; }
   .reddit-container #reddit-title {
     text-align: center;
-    padding-top: 1em;
+    padding-top: 3em;
     color: ghostwhite;
     line-height: 1.3;
     font-weight: 400; }
@@ -232,3 +232,83 @@ a {
     text-align: center; }
     .Footer .footer-section h3 {
       text-align: center; } }
+
+.react-autosuggest__container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em; }
+
+.react-autosuggest__input {
+  width: 95%;
+  height: 1.4em;
+  font-size: 1em; }
+
+.react-autosuggest__input--focused {
+  border: 2px solid #FFC107;
+  height: 1.4em;
+  font-size: 1em; }
+
+.react-autosuggest__suggestions-container {
+  background-color: #263238;
+  color: snow;
+  width: 100%; }
+
+@media (min-width: 1200px) {
+  .react-autosuggest__container {
+    width: 50%;
+    margin-top: 2em; } }
+
+.homepage-section {
+  width: 80%;
+  margin: 2em auto; }
+  .homepage-section .homepage-title {
+    text-align: center;
+    margin: 1em;
+    font-size: 2em; }
+  .homepage-section .homepage-paragraph {
+    line-height: 1.5;
+    color: darkslategrey;
+    font-weight: 500;
+    padding: 1em 0; }
+
+.features {
+  height: auto;
+  background-color: #1E88E5;
+  padding: 2em 0; }
+  .features #features-title {
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    color: #FFC107;
+    text-transform: uppercase;
+    font-size: 1.8em; }
+  .features #features-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1.5em 0; }
+    .features #features-list .feature-item {
+      width: 30%;
+      text-align: center;
+      color: snow;
+      float: left; }
+      .features #features-list .feature-item .feature-item-title {
+        text-align: center;
+        font-size: 1.7em;
+        padding: .5em 0;
+        font-weight: bolder;
+        color: snow; }
+  .features .feature-item-text {
+    line-height: 1.5;
+    padding: .5em 2em 0 2em; }
+
+@media (max-width: 767px) {
+  .features #features-list {
+    display: flex;
+    flex-direction: column; }
+    .features #features-list .feature-item {
+      width: 100%;
+      padding: 1em 0; }
+  .features .feature-item-text {
+    padding: .5em 1.5em 0 1.5em; } }
