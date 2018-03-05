@@ -314,3 +314,36 @@ a {
       padding: 1em 0; }
   .features .feature-item-text {
     padding: .5em 1.5em 0 1.5em; } }
+
+.form-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em; }
+  .form-container h2 {
+    text-align: center;
+    padding: 1em; }
+
+.form-group {
+  padding: 1em; }
+  .form-group label {
+    font-style: italic; }
+  .form-group input {
+    width: 100%; }
+  .form-group button {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: darkslategrey;
+    width: 50%;
+    margin: auto; }
+    .form-group button:hover {
+      background-color: #FFC107; }
+
+@media (min-width: 1200px) {
+  .form-container {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    margin-bottom: 3em; } }

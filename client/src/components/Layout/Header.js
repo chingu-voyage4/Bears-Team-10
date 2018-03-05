@@ -16,7 +16,8 @@ class Header extends Component {
           <li><Link to="/map" className="nav-link">Map</Link></li>
           <li><Link to="/pictureoftheday" className="nav-link">POTD</Link></li>
           <li><Link to="/spacex" className="nav-link">Space X</Link></li>
-          <li><Link to="/stack-exchange" className="nav-link">Stack Exchange</Link></li> 
+          <li><Link to="/login" className="nav-link">Login</Link></li>
+          <li><Link to="/register" className="nav-link">Register</Link></li>
         </ul>
 
         <Link to="/search"><SmIcon icon={SEARCH} /></Link>
