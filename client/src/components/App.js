@@ -11,6 +11,7 @@ import SpaceX from './Views/SpaceX';
 import StackExchange from './Views/StackExchange';
 import LogIn from './Elements/LogInForm';
 import Register from './Elements/RegisterForm';
+import Epic from './Views/Epic';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path="/stack-exchange" component={StackExchange} />
             <Route path="/login" component={LogIn} />
             <Route path="/register" component={Register} />
+            <Route path="/epic" component={Epic} />
           </Switch>
 
           <RedditFeed subreddit="NASA" />
