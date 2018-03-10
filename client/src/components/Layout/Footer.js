@@ -23,7 +23,6 @@ class Footer extends Component {
             <h3 className="footer-title">Team</h3>
               <li><a href="https://github.com/michaelgee22" target="_blank">michaelgee22</a></li>
               <li><a href="https://github.com/Nicknyr" target="_blank">nicknyr</a></li>
-              <li><a href="https://github.com/sam4815" target="_blank">sam4815</a></li>
               <li><a href="https://github.com/SharpEleven91" target="_blank">sharpeleven11</a></li>
           </ul>
         </div>

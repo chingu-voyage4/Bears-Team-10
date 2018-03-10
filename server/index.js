@@ -1,16 +1,28 @@
-const express = require('express');
-const mongoose = require('mongoose');
+require('dotenv').config();
 
-const routes = require('./routes');
-const keys = require('./config/keys');
+const express = require('express'),
+  app = express(),
+  bodyParser = require('body-parser'),
+  morgan = require('morgan'),
+  passport = require('passport'),
+  passportSetUp = require('./services/passport'),
+  cors = require('cors');
+  dbConnection = require('./db'),
+  session = require('express-session'),
+  port = process.env.PORT ? process.env.PORT : 5000;
 
-const app = express();
+app.use(morgan('dev'));
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-mongoose.connect(keys.mongoConfig);
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-
-app.use('/api', routes);
+app.use(session({
+  resave: false,
+  saveUninitialized: true,
+  secret: process.env.EXPRESS_SESSION_SECRET
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
@@ -21,8 +33,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const port = process.env.PORT ? process.env.PORT : 5000;
+app.use('/api', require('./api/rootRoutes'));
+app.use('/auth', require('./api/authRoutes'));
 
 app.listen(port, () => {
-  console.log('Express Server Listening on Port 5000!');
+  console.log(`Express Server Listening on Port ${port}!`);
 });

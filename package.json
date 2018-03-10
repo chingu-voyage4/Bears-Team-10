@@ -16,11 +16,24 @@
   "author": "bears-team-10",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "mongoose": "^5.0.3"
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.3",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-github2": "^0.1.11",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
+    "dotenv": "^5.0.1",
     "nodemon": "^1.14.11"
   }
 }

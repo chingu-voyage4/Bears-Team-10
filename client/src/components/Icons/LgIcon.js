@@ -12,7 +12,7 @@ LgIcon.defaultProps = {
 }
 
 LgIcon.propTypes = {
-  d: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
   color: PropTypes.string
 }
 
