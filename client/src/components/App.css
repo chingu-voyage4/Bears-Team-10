@@ -258,6 +258,9 @@ a {
     .rockets-container .rocket:focus-within {
       height: fit-content; }
 
+.pastLaunch-container {
+  width: 90%; }
+
 .react-autosuggest__container {
   width: 80%;
   margin-left: auto;
