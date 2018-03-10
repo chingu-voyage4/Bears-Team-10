@@ -1,6 +1,10 @@
 
 export default function reducer (state={
-  spacexData: [],
+  rockets: [],
+  company: [],
+  futureLaunches: [],
+  pastLaunches: [],
+  launchPads: [],
   fetching: false,
   fetched: false,
   error: null,
@@ -18,7 +22,7 @@ export default function reducer (state={
         ...state,
         fetching: false,
         fetched: true,
-        spacexData: action.payload
+        rockets: action.payload
       }
     }
     case "FETCH_SPACEX_COMPANY": {
@@ -32,7 +36,7 @@ export default function reducer (state={
         ...state,
         fetching: false,
         fetched: true,
-        spacexData: action.payload
+        company: action.payload
       }
     }
     case "FETCH_SPACEX_LAUNCHPADS": {
@@ -46,7 +50,7 @@ export default function reducer (state={
         ...state,
         fetching: false,
         fetched: true,
-        spacexData: action.payload
+        launchpads: action.payload
       }
     }
     case "FETCH_SPACEX_UPCOMING_LAUNCHES": {
@@ -60,7 +64,7 @@ export default function reducer (state={
         ...state,
         fetching: false,
         fetched: true,
-        spacexData: action.payload
+        futureLaunches: action.payload
       }
     }
     case "FETCH_SPACEX_PAST_LAUNCHES": {
@@ -74,7 +78,7 @@ export default function reducer (state={
         ...state,
         fetching: false,
         fetched: true,
-        spacexData: action.payload
+        pastLaunches: action.payload
       }
     }
   }
