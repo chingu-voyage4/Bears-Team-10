@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LgIcon from '../Icons/LgIcon';
-import { DATA, MAP, ROCKET } from '../Icons/IconList';
+import { DATA_ICON, MAP_ICON, ROCKET_ICON } from '../Icons/IconList';
 
 const Homepage = props => (
   <div className="route-container">
@@ -17,17 +17,17 @@ const Homepage = props => (
       <ul id="features-list">
         <li className="feature-item">
           <h3 className="feature-item-title">Data</h3>
-          <LgIcon icon={DATA} />
+          <LgIcon icon={DATA_ICON} />
           <p className="feature-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quibusdam non aspernatur, natus, perferendis</p>
         </li>
-        <li class="feature-item">
+        <li className="feature-item">
           <h3 className="feature-item-title">Launches</h3>
-          <LgIcon icon={ROCKET} />
+          <LgIcon icon={ROCKET_ICON} />
           <p className="feature-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut repellendus repellat dolorum qui alias</p>
         </li>
         <li className="feature-item">
           <h3 className="feature-item-title">Maps</h3>
-          <LgIcon icon={MAP} />
+          <LgIcon icon={MAP_ICON} />
           <p className="feature-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad veritatis vitae tempora, saepe nisi</p>
         </li>
       </ul>

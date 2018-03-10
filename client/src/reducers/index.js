@@ -1,11 +1,13 @@
 // Combine Reducers in this file and export them
 import { combineReducers } from 'redux'
-import pod from './pod-reducer';
-import spacex from './spacex-reducer';
-import epic from './epic-reducer';
+import authReducer from './auth-reducer';
+import podReducer from './pod-reducer';
+import spacexReducer from './spacex-reducer';
+import epicReducer from './epic-reducer';
 
 export default combineReducers({
-  pod,
-  spacex,
-  epic
+  auth: authReducer,
+  podReducer,
+  spacexReducer,
+  epicReducer
 })

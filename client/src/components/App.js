@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import actions from '../actions/auth-action';
+
 import Header from './Layout/Header';
 import Footer from './Layout/Footer';
+
+import AuthPage from './Views/AuthPage';
+import Epic from './Views/Epic';
 import HomePage from './Views/HomePage';
 import MapPage from './Views/MapPage';
 import PictureOfTheDay from './Views/PictureOfTheDay';
@@ -9,12 +16,16 @@ import RedditFeed from './Elements/RedditFeed';
 import SearchPage from './Views/SearchPage';
 import SpaceX from './Views/SpaceX';
 import StackExchange from './Views/StackExchange';
-import LogIn from './Elements/LogInForm';
-import Register from './Elements/RegisterForm';
-import Epic from './Views/Epic';
+import TokenConfig from './Views/TokenConfig';
+import UserDashboard from './Views/UserDashboard';
+
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.updateUserStatus(localStorage.getItem('AUTH_TOKEN'));
+  }
+
   render() {
     return (
       <Router>
@@ -28,9 +39,12 @@ class App extends Component {
             <Route path="/search" component={SearchPage} />
             <Route path="/spacex" component={SpaceX} />
             <Route path="/stack-exchange" component={StackExchange} />
-            <Route path="/login" component={LogIn} />
-            <Route path="/register" component={Register} />
             <Route path="/epic" component={Epic} />
+            <Route path="/token" component={TokenConfig} />
+            <Route path="/dashboard" component={UserDashboard} />
+
+            <Route path="/log-in" render={() => <AuthPage method="Log In" /> } />
+            <Route path="/register" render={() => <AuthPage method="Register" /> } />
           </Switch>
 
           <RedditFeed subreddit="NASA" />
@@ -43,5 +57,14 @@ class App extends Component {
   }
 }
 
+App.propTypes = {
+  updateUserStatus: PropTypes.func.isRequired,
+};
 
-export default App;
+function mapStateToPros({ auth }) {
+  return {
+    authenticated: auth.authenticated,
+  };
+}
+
+export default connect(mapStateToPros, actions)(App);
