@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
+import axios from 'axios';
 import {list} from './SearchSuggestions';
 
 // Importing list const that contains search terms to suggest
@@ -37,7 +38,9 @@ class SearchBar extends Component {
     // and they are initially empty because the Autosuggest is closed.
     this.state = {
       value: '',
-      suggestions: []
+      suggestions: [],
+      results: [],
+      description: []
     };
   }
 
@@ -62,6 +65,29 @@ class SearchBar extends Component {
     });
   };
 
+
+  loadSearchResults = (event) => {
+    event.preventDefault();
+    var search = this.state.value;
+
+  /*  axios.get(`https://images-api.nasa.gov/search?q=` + `search`)
+      .then(res => {
+        const results = res.data.collection.items;
+        //console.log(results);
+        for(var r of results){
+          //console.log(r.data[0].description);
+          const descriptions = r.data[0].descriptions;
+        }
+      });
+  */
+      axios.get(`https://images-api.nasa.gov/search?q=` + `search`)
+        .then(res => res.data.collection.items)
+        .then(json => {
+          //json.map(obj => console.log(Object.values(obj)))
+      })
+  }
+
+
   render() {
     const { value, suggestions } = this.state;
 
@@ -72,8 +98,10 @@ class SearchBar extends Component {
       onChange: this.onChange
     };
 
+
     // Finally, render it!
     return (
+      <div>
       <Autosuggest
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -82,6 +110,8 @@ class SearchBar extends Component {
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
       />
+      <button onClick={this.loadSearchResults.bind(this)}>Search</button>
+      </div>
     );
   }
 }
