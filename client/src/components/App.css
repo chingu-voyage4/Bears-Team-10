@@ -142,6 +142,11 @@ a {
         .reddit-container .stories .story a:hover {
           color: #FFC107; }
 
+@media (max-width: 767px) {
+  .reddit-container {
+    width: 100%;
+    height: auto; } }
+
 .leaflet-popup-content-wrapper {
   background-color: snow; }
   .leaflet-popup-content-wrapper span {
@@ -159,7 +164,7 @@ a {
 
 .header {
   width: calc(100% - 50px);
-  height: 75px;
+  height: 50px;
   background-color: #1E88E5;
   color: #F5F5F5;
   display: flex;
@@ -287,14 +292,35 @@ a {
     width: 50%;
     margin-top: 2em; } }
 
+.homepage-top {
+  background: url("../../src/images/earth.png") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh; }
+
+.route-container {
+  margin: 0; }
+
 .homepage-section {
-  width: 80%;
-  margin: 2em auto; }
-  .homepage-section .homepage-title {
+  width: 100%; }
+  .homepage-section .homepage-title-top {
     text-align: center;
-    margin: 1em;
-    font-size: 2em; }
-  .homepage-section .homepage-paragraph {
+    padding: 2em;
+    font-size: 2em;
+    color: snow; }
+  .homepage-section .homepage-title-bottom {
+    text-align: center;
+    padding: 2em;
+    font-size: 2em;
+    color: darkslategrey; }
+  .homepage-section .homepage-paragraph-top {
+    line-height: 1.5;
+    color: snow;
+    font-weight: 500;
+    padding: 1em 0; }
+  .homepage-section .homepage-paragraph-bottom {
     line-height: 1.5;
     color: darkslategrey;
     font-weight: 500;
@@ -332,6 +358,13 @@ a {
     padding: .5em 2em 0 2em; }
 
 @media (max-width: 767px) {
+  .homepage-top {
+    background: url("../../src/images/earth.png") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100vh; }
   .features #features-list {
     display: flex;
     flex-direction: column; }

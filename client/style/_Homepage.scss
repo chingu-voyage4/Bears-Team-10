@@ -1,14 +1,42 @@
-.homepage-section {
-  width: 80%;
-  margin: 2em auto;
+.homepage-top {
+  background: url('../../src/images/earth.png') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+}
 
-  .homepage-title {
+.route-container {
+  margin: 0;
+}
+
+.homepage-section {
+  width: 100%;
+  //margin: 2em auto;
+
+  .homepage-title-top {
     text-align: center;
-    margin: 1em;
+    padding: 2em;
     font-size: 2em;
+    color: snow;
   }
 
-  .homepage-paragraph {
+  .homepage-title-bottom {
+    text-align: center;
+    padding: 2em;
+    font-size: 2em;
+    color: darkslategrey;
+  }
+
+  .homepage-paragraph-top {
+    line-height: 1.5;
+    color: snow;
+    font-weight: 500;
+    padding: 1em 0;
+  }
+
+  .homepage-paragraph-bottom {
     line-height: 1.5;
     color: darkslategrey;
     font-weight: 500;
@@ -60,6 +88,15 @@
 }
 
 @media(max-width: 767px) {
+  .homepage-top {
+    background: url('../../src/images/earth.png') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100vh;
+  }
+
   .features {
     #features-list {
       display: flex;

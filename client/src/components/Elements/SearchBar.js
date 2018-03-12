@@ -39,8 +39,7 @@ class SearchBar extends Component {
     this.state = {
       value: '',
       suggestions: [],
-      results: [],
-      description: []
+      results: []
     };
   }
 
@@ -70,23 +69,12 @@ class SearchBar extends Component {
     event.preventDefault();
     var search = this.state.value;
 
-  /*  axios.get(`https://images-api.nasa.gov/search?q=` + `search`)
+    axios.get(`https://images-api.nasa.gov/search?q=` + `search`)
       .then(res => {
-        const results = res.data.collection.items;
-        //console.log(results);
-        for(var r of results){
-          //console.log(r.data[0].description);
-          const descriptions = r.data[0].descriptions;
-        }
-      });
-  */
-      axios.get(`https://images-api.nasa.gov/search?q=` + `search`)
-        .then(res => res.data.collection.items)
-        .then(json => {
-          //json.map(obj => console.log(Object.values(obj)))
+        const data = res.data.collection.items;
+        this.setState({ results: data});
       })
   }
-
 
   render() {
     const { value, suggestions } = this.state;
@@ -98,6 +86,9 @@ class SearchBar extends Component {
       onChange: this.onChange
     };
 
+  console.log(this.state.results);
+
+  const data = this.state.results;
 
     // Finally, render it!
     return (
@@ -111,6 +102,21 @@ class SearchBar extends Component {
         inputProps={inputProps}
       />
       <button onClick={this.loadSearchResults.bind(this)}>Search</button>
+
+      <div className="container">
+      {data.map(function(d, index){
+         return (
+           <div>
+           <li key={index}>{d.data[0].title}</li>
+           <li key={index}>{d.data[0].description}</li>
+           <li key={index}>{d.data[0].date_created}</li>
+           <li key={index}>{d.data[0].keywords}</li>
+           <br/>
+           </div>
+         )
+       })}
+      </div>
+
       </div>
     );
   }

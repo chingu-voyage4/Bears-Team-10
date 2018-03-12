@@ -18,6 +18,8 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "cesium": "^1.43.0",
+    "cesium-react": "^0.2.1",
     "concurrently": "^3.5.1",
     "cors": "^2.8.4",
     "express": "^4.16.2",
@@ -30,10 +32,13 @@
     "passport-github2": "^0.1.11",
     "passport-google-oauth20": "^1.0.0",
     "passport-jwt": "^3.0.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "react-cesium": "0.0.1"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.5.1",
     "dotenv": "^5.0.1",
+    "html-webpack-include-assets-plugin": "^1.0.4",
     "nodemon": "^1.14.11"
   }
 }
