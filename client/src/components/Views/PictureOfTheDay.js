@@ -42,7 +42,7 @@ const mapDispatchToProps = dispatch =>  ({
 })
 
 const mapStateToProps = state => ({
-  pod: state.pod
+  pod: state.podReducer
 })
 
 
