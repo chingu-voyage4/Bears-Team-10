@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One|Roboto");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("../../node_modules/material-components-web/dist/material-components-web.css");
 .route-container {
   margin: 30px 0; }
 
@@ -244,27 +245,26 @@ a {
   text-align: center; }
 
 .rockets-header {
-  margin-top: 20px;
   text-align: center; }
 
-.rockets-container {
-  text-align: center;
-  padding-top: 5px;
+.spacex-container {
+  width: 80%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center; }
-  .rockets-container .rocket {
-    overflow: hidden;
-    height: 22px;
-    transition: all 0.50s; }
-    .rockets-container .rocket .rocket-name {
-      text-decoration: none; }
-    .rockets-container .rocket:focus-within {
-      height: fit-content; }
-
-.pastLaunch-container {
-  width: 90%; }
+  justify-content: space-around; }
+  .spacex-container #launch-container {
+    margin: 150px 0 150px 0;
+    width: 25%;
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    .spacex-container #launch-container::-webkit-scrollbar {
+      width: 12px;
+      background-color: transparent;
+      border-radius: 10px; }
+    .spacex-container #launch-container::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #1E88E5; }
 
 .react-autosuggest__container {
   width: 80%;
