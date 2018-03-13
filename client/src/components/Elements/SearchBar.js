@@ -104,17 +104,20 @@ class SearchBar extends Component {
       <button onClick={this.loadSearchResults.bind(this)}>Search</button>
 
       <div className="container">
+      <ul>
       {data.map(function(d, index){
          return (
            <div>
-           <li key={index}>{d.data[0].title}</li>
-           <li key={index}>{d.data[0].description}</li>
-           <li key={index}>{d.data[0].date_created}</li>
-           <li key={index}>{d.data[0].keywords}</li>
-           <br/>
+               <li key={index}>
+               <h4>{d.data[0].title}</h4><br/>
+               <p>{d.data[0].description}</p><br/>
+               <p>{d.data[0].date_created}</p><br />
+               Keywords: {d.data[0].keywords}<br/>
+               </li><br/>
            </div>
          )
        })}
+       </ul>
       </div>
 
       </div>

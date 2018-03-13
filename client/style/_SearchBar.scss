@@ -23,6 +23,33 @@
   width: 100%;
 }
 
+.container {
+  background-color: red;
+  width: 80%;
+  height: 450em;
+  margin-left: auto;
+  margin-right: auto;
+
+  ul {
+    display: inline;
+    padding-top: 10em;
+  }
+
+  li {
+    list-style-type: none;
+    background-color: blue;
+    width: 20%;
+    display: inline-block;
+    height: 20em;
+    overflow: hidden;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
 
 @media(min-width: 1200px) {
   .react-autosuggest__container {
