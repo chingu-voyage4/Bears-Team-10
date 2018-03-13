@@ -46,7 +46,7 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const mapStateToProps = state => ({
-  data: state.spacex
+  data: state.spacexReducer
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpaceX);
