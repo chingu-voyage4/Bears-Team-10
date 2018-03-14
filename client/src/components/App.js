@@ -68,4 +68,5 @@ function mapStateToPros({ auth }) {
   };
 }
 
+
 export default connect(mapStateToPros, actions)(App);
