@@ -1,45 +1,36 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { fetchISS } from '../../actions/ISS-action';
 
 class ISS extends Component {
-  constructor(props) {
-  super(props);
-
-  this.state = {
-      issLatitude: '',
-      issLongitude: '',
-      time: ''
-    }
-  }
-
-
   componentDidMount() {
-    axios.get(`http://api.open-notify.org/iss-now.json`)
-      .then( res => {
-        const latitude = res.data.iss_position.latitude;
-        const longitude = res.data.iss_position.longitude;
-        const time = res.data.timestamp;
-
-        this.setState({
-          issLatitude: latitude,
-          issLongitude: longitude,
-          time: time
-        })
-      })
+    this.props.fetchISS();
   }
 
 
   render() {
-    const longitude = this.state.issLongitude;
-    const latitude = this.state.issLatitude;
+    const {iss} = this.props;
+    const data = iss.issData;
+    console.log(data);
+    const time = this.props.iss.issData.timestamp;
+    console.log(time);
+
 
     return (
       <div className="iss-container">
-        <h2>The Internation Space Station is currently located over {latitude} {longitude}</h2>
+        <h2>The Internation Space Station is currently located over</h2>
       </div>
     );
   }
 }
 
-export default ISS;
+const mapDispatchToProps = dispatch => ({
+  fetchISS: () => dispatch(fetchISS())
+})
+
+const mapStateToProps = state => ({
+  iss: state.ISSReducer
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ISS);
