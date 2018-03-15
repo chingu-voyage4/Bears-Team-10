@@ -14,6 +14,7 @@ import { icon } from './Icon';
   const url = 'https://api.spacexdata.com/v2/launchpads';
   const nasaURL = 'https://data.nasa.gov/resource/gvk9-iz74.json';
   const leafURL = "https://api.mapbox.com/styles/v1/nicknyr/cje7mtk2y6gf92snsydobiahf/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoibmlja255ciIsImEiOiJjajduNGptZWQxZml2MndvNjk4eGtwbDRkIn0.L0aWwfHlFJVGa-WOj7EHaA";
+  const issURL = 'http://api.open-notify.org/iss-now.json';
 
   class Mapbox extends Component {
     constructor(props){
@@ -24,7 +25,8 @@ import { icon } from './Icon';
         lng: -80.577366,
         },
         spacexData: [],
-        nasaData: []
+        nasaData: [],
+        issData: []
       }
     }
 
@@ -45,11 +47,21 @@ import { icon } from './Icon';
       .catch(err => {
         console.log('Error retrieving NASA data');
       })
+
+    axios.get(issURL)
+      .then(res => {
+        this.setState({issData: res.data})
+        console.log(this.state.issData);
+      })
+      .catch(err => {
+        console.log('Error retrieving ISS data');
+      })
   }
 
   render() {
     const {spacexData} = this.state;
     const {nasaData} = this.state;
+    const {issData} = this.state;
 
     return (
       <div>

@@ -12,14 +12,24 @@ class ISS extends Component {
   render() {
     const {iss} = this.props;
     const data = iss.issData;
-    console.log(data);
+    //console.log(data);
     const time = this.props.iss.issData.timestamp;
-    console.log(time);
+    //console.log(time);
+
+    const lat = Object.keys(data).map(key => {
+      return (data[key].latitude);
+    })
+
+    const long = Object.keys(data).map(key => {
+      return (data[key].longitude);
+    })
 
 
     return (
       <div className="iss-container">
-        <h2>The Internation Space Station is currently located over</h2>
+        <h2>As of {time} the Internation Space Station is currently located over</h2>
+        <p>{lat}</p>
+        <p>{long}</p>
       </div>
     );
   }
