@@ -117,7 +117,7 @@ a {
   background-color: #263238;
   width: 50%;
   float: left;
-  height: 30em; }
+  height: 32em; }
   .reddit-container hr {
     width: 80%;
     margin-left: auto;
@@ -288,7 +288,7 @@ a {
   width: 100%; }
 
 .container {
-  background-color: red;
+  background-color: #F5F5F5;
   width: 80%;
   height: 450em;
   margin-left: auto;
@@ -298,8 +298,9 @@ a {
     padding-top: 10em; }
   .container li {
     list-style-type: none;
-    background-color: blue;
-    width: 20%;
+    background-color: #1E88E5;
+    color: snow;
+    width: 100%;
     display: inline-block;
     height: 20em;
     overflow: hidden;
@@ -312,7 +313,16 @@ a {
 @media (min-width: 1200px) {
   .react-autosuggest__container {
     width: 50%;
-    margin-top: 2em; } }
+    margin-top: 2em; }
+  .container {
+    height: 1100em;
+    overflow: contain; }
+    .container li {
+      width: 30%;
+      margin: 1em;
+      height: 30em; }
+    .container h4 {
+      text-align: center; } }
 
 .homepage-top {
   background: url("../../src/images/earth.png") no-repeat center center fixed;

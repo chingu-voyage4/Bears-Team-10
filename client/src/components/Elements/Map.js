@@ -63,6 +63,8 @@ import { icon } from './Icon';
     const {nasaData} = this.state;
     const {issData} = this.state;
 
+    const nyPosition = [40.730610, -73.935242];
+
     return (
       <div>
         <Map
@@ -72,6 +74,14 @@ import { icon } from './Icon';
         <TileLayer
           url={leafURL}
           attribution="<attribution>" />
+
+          <Marker position={nyPosition} icon={icon}>
+          <Popup>
+            <span>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </span>
+          </Popup>
+          </Marker>
 
           // Renders SpaceX Facilities on map
           {spacexData.map((elem, i) => {

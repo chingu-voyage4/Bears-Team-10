@@ -12,9 +12,7 @@ class ISS extends Component {
   render() {
     const {iss} = this.props;
     const data = iss.issData;
-    //console.log(data);
     const time = this.props.iss.issData.timestamp;
-    //console.log(time);
 
     const lat = Object.keys(data).map(key => {
       return (data[key].latitude);

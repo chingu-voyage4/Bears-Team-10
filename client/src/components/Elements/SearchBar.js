@@ -91,15 +91,15 @@ class SearchBar extends Component {
   const data = this.state.results;
 
   const display = Object.keys(data).map((d, key) => {
-    console.log(data[0].links[0].href);
+    console.log(data[0].links[0].href)
     return (
       <div>
           <li key={key}>
           <h4>{data[key].data[0].title}</h4><br/>
-          <img src='{data[key].links[0].href}' alt="image"/>
+          <img src={data[0].links[0].href} alt="image" width="300" height="300"/>
           <p>{data[key].data[0].description}</p><br/>
           <p>{data[0].date_created}</p><br />
-          Keywords:{data[key].data[0].keywords}<br/>
+          <p>Keywords:{data[key].data[0].keywords}</p> <br/>
           </li><br/>
       </div>
     )

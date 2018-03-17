@@ -34,7 +34,8 @@ class App extends Component {
         <div className="app-container">
           <Header />
 
-          
+
+
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/map" component={MapPage} />
