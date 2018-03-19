@@ -2,6 +2,9 @@
 
 ![rocketimage](client/src/images/launch.svg)
 
+## About the Project
+A website that allows the user to search various NASA APIs as well as a SpaceX API. The site displays the NASA Picture of the Day, SpaceX and NASA launch data, and allows the user to view images and content from several APIs in one place.
+
 
 ## Project Set Up
 
