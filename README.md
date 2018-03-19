@@ -1,5 +1,8 @@
 # Bears-10 Cohort Project
 
+![rocketimage](client/src/images/launch.svg)
+
+
 ## Project Set Up
 
 ### Fork and then clone *your version* of the repo
