@@ -24,7 +24,7 @@
 }
 
 .container {
-  background-color: red;
+  background-color: $secondary-color;
   width: 80%;
   height: 450em;
   margin-left: auto;
@@ -37,8 +37,9 @@
 
   li {
     list-style-type: none;
-    background-color: blue;
-    width: 20%;
+    background-color: $primary-color;
+    color: snow;
+    width: 100%;
     display: inline-block;
     height: 20em;
     overflow: hidden;
@@ -55,5 +56,20 @@
   .react-autosuggest__container {
     width: 50%;
     margin-top: 2em;
+  }
+
+  .container {
+    height: 1100em;
+    overflow: contain;
+
+    li {
+      width: 30%;
+      margin: 1em;
+      height: 30em;
+    }
+
+    h4 {
+      text-align: center;
+    }
   }
 }
