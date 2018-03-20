@@ -69,3 +69,9 @@ export function fetchPastLaunches() {
       })
   }
 }
+
+export function setActiveLaunch(launch) {
+  return function(dispatch) {
+    dispatch({type: "SET_ACTIVE_LAUNCH", payload: launch});
+  }
+}
