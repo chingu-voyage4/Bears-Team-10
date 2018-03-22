@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Rocket from '../Elements/Rocket';
-import Launch from '../Elements/Launch'
+import Launch from '../Elements/Launch';
+import DisplayLaunch from '../Elements/DisplayLaunch';
 import { 
   fetchRockets,
   fetchCompanyData,
@@ -19,6 +20,7 @@ class SpaceX extends Component {
   render() {
     const rockets = this.props.data.rockets;
     const pastLaunches = this.props.data.pastLaunches;
+    const activeLaunch = this.props.data.activeLaunch;
     return (
       <div className="route-container">
         <h2 className="spacex-header">SpaceX Info</h2>
@@ -30,6 +32,7 @@ class SpaceX extends Component {
               })}
             </ul>
           </div>
+          <DisplayLaunch launch={activeLaunch}/>
         </div>
       </div>
     );
