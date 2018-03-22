@@ -26,7 +26,6 @@
       }
     }
   }
-
   .menu-btn {
     display: none;
     margin-left: auto;
@@ -42,11 +41,9 @@
     .header-title {
       padding-left: 10px;
     }
-
-    .nav-links {
+    .nav-links, #search-icon {
       display: none;
     }
-
     .menu-btn {
       display: block;
     }

@@ -1,6 +1,6 @@
 const express = require('express'),
-  router = express.Router(),
-  Auth = require('../controllers/authController');
+      router = express.Router(),
+      Auth = require('../controllers/authController');
 
 // ********** GITHUB **********
 router.get('/github', Auth.githubLogIn);

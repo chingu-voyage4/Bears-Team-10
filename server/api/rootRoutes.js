@@ -1,6 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const router = express.Router();
+const express = require('express'),
+      mongoose = require('mongoose'),
+      router = express.Router();
 
 const MockEntry = require('../db/models/MockData');
 

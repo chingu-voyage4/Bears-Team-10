@@ -1,7 +1,7 @@
 const express = require('express'),
-  passport = require('passport'),
-  token = require('../controllers/tokenController'),
-  User = require('../db/models/User');
+      passport = require('passport'),
+      token = require('../controllers/tokenController'),
+      User = require('../db/models/User');
 
 require('../services/passport');
 

@@ -23,8 +23,12 @@ class SpaceX extends Component {
     const activeLaunch = this.props.data.activeLaunch;
     return (
       <div className="route-container">
+
         <h2 className="spacex-header">SpaceX Info</h2>
+
         <div className="spacex-container">
+          <DisplayLaunch launch={activeLaunch} />
+
           <div id="launch-container">
             <ul className="mdc-list">
               {pastLaunches.map(function(launch) {
@@ -32,8 +36,8 @@ class SpaceX extends Component {
               })}
             </ul>
           </div>
-          <DisplayLaunch launch={activeLaunch}/>
         </div>
+
       </div>
     );
   }
