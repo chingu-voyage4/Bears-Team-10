@@ -2,6 +2,7 @@
 export default function reducer (state={
   rockets: [],
   company: [],
+  activeLaunch: [],
   futureLaunches: [],
   pastLaunches: [],
   launchPads: [],
@@ -79,6 +80,12 @@ export default function reducer (state={
         fetching: false,
         fetched: true,
         pastLaunches: action.payload
+      }
+    }
+    case "SET_ACTIVE_LAUNCH": {
+      return {
+        ...state,
+        activeLaunch: action.payload
       }
     }
   }
