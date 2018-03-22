@@ -1,11 +1,11 @@
 const passport = require('passport'),
-  JwtStrategy = require('passport-jwt').Strategy,
-  ExtractJwt = require('passport-jwt').ExtractJwt,
-  GithubStrategy = require('passport-github2').Strategy,
-  GoogleStrategy = require('passport-google-oauth20').Strategy;
-  FacebookStrategy = require('passport-facebook').Strategy,
-  mongoose = require('mongoose'),
-  User = require('../db/models/User');
+      JwtStrategy = require('passport-jwt').Strategy,
+      ExtractJwt = require('passport-jwt').ExtractJwt,
+      GithubStrategy = require('passport-github2').Strategy,
+      GoogleStrategy = require('passport-google-oauth20').Strategy;
+      FacebookStrategy = require('passport-facebook').Strategy,
+      mongoose = require('mongoose'),
+      User = require('../db/models/User');
 
 //Turning a user model and turning it into a user ID provided by MongoDB
 passport.serializeUser((user, done) => {

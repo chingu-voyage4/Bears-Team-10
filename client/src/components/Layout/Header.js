@@ -34,7 +34,7 @@ class Header extends Component {
           {this.renderHeaderLinks()}
         </ul>
 
-        <Link to="/search"><SmIcon icon={SEARCH_ICON} /></Link>
+        <Link id="search-icon" to="/search"><SmIcon icon={SEARCH_ICON} /></Link>
 
         <div className="menu-btn">
           <SmIcon icon={MENU_ICON} />
