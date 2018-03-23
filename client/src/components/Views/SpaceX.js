@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import Rocket from '../Elements/Rocket';
 import Launch from '../Elements/Launch';
 import DisplayLaunch from '../Elements/DisplayLaunch';
+import LaunchList from '../Elements/LaunchList';
 import { 
   fetchRockets,
   fetchCompanyData,
   fetchLaunchPads,
   fetchUpcomingLaunches,
   fetchPastLaunches,
+  setSortFilter
 } from '../../actions/spacex-action';
 
 class SpaceX extends Component {
@@ -16,6 +18,11 @@ class SpaceX extends Component {
     this.props.fetchRockets();
     this.props.fetchPastLaunches();
     this.props.fetchFutureLaunches();
+  }
+
+  sort(e) {
+    console.log(e.target.value);
+    this.props.sortFilter(e.target.value);
   }
 
   populateLaunches() {
@@ -39,7 +46,7 @@ class SpaceX extends Component {
         <div className="spacex-container">
           <DisplayLaunch launch={activeLaunch} />
           <div id="launch-sort">
-            Sort by <select>
+            Sort by <select onChange={this.sort.bind(this)}>
                       <option value="date">Date</option>
                       <optgroup label="Launch Site">
                         {launchSites.map(function(site) {
@@ -53,13 +60,7 @@ class SpaceX extends Component {
                       </optgroup>
                     </select>
           </div>
-          <div id="launch-container">
-            <ul className="mdc-list">
-              {pastLaunches.map(function(launch) {
-                return <Launch launch={launch}/>
-              })}
-            </ul>
-          </div>
+          <LaunchList launches={pastLaunches}/>
         </div>
 
       </div>
@@ -71,6 +72,7 @@ const mapDispatchToProps = dispatch => ({
   fetchRockets: () => dispatch(fetchRockets()),
   fetchPastLaunches: () => dispatch(fetchPastLaunches()),
   fetchFutureLaunches: () => dispatch(fetchUpcomingLaunches()),
+  sortFilter: (filter) => dispatch(setSortFilter(filter)) 
 })
 
 const mapStateToProps = state => ({

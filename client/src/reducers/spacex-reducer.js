@@ -1,6 +1,7 @@
 
 export default function reducer (state={
   rockets: [],
+  filter: null,
   company: [],
   activeLaunch: [],
   futureLaunches: [],
@@ -86,6 +87,12 @@ export default function reducer (state={
       return {
         ...state,
         activeLaunch: action.payload
+      }
+    }
+    case "SET_SORT_FILTER": {
+      return {
+        ...state,
+        filter: action.payload
       }
     }
   }
