@@ -17,10 +17,20 @@ class SpaceX extends Component {
     this.props.fetchPastLaunches();
     this.props.fetchFutureLaunches();
   }
+
+  populateLaunches() {
+    const output = new Set();
+    this.props.data.pastLaunches.map(function(launch) {
+      output.add(launch.launch_site.site_name);
+    })
+    return Array.from(output);
+  }
   render() {
     const rockets = this.props.data.rockets;
     const pastLaunches = this.props.data.pastLaunches;
+    const launchSites = this.populateLaunches();
     const activeLaunch = this.props.data.activeLaunch;
+    console.log(launchSites);
     return (
       <div className="route-container">
 
@@ -28,7 +38,21 @@ class SpaceX extends Component {
 
         <div className="spacex-container">
           <DisplayLaunch launch={activeLaunch} />
-
+          <div id="launch-sort">
+            Sort by <select>
+                      <option value="date">Date</option>
+                      <optgroup label="Launch Site">
+                        {launchSites.map(function(site) {
+                          return <option value={site}> {site}</option>
+                        })}
+                      </optgroup>
+                      <optgroup label="Rocket">
+                        {rockets.map(function(rocket) {
+                          return <option value={rocket.name}> {rocket.name}</option>
+                        })}
+                      </optgroup>
+                    </select>
+          </div>
           <div id="launch-container">
             <ul className="mdc-list">
               {pastLaunches.map(function(launch) {
