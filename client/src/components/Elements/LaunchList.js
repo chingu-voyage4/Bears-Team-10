@@ -6,6 +6,9 @@ class LaunchList extends Component {
     sort() {
         const filter = this.props.data.filter;
         if (filter) {
+            if (filter === "Date") {
+                return this.props.launches;
+            }
             let output = this.props.launches.filter(function(launch) {
                 if (launch.rocket.rocket_name === filter || launch.launch_site.site_name === filter) {
                     return launch;

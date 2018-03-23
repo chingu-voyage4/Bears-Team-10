@@ -21,7 +21,6 @@ class SpaceX extends Component {
   }
 
   sort(e) {
-    console.log(e.target.value);
     this.props.sortFilter(e.target.value);
   }
 
@@ -37,7 +36,6 @@ class SpaceX extends Component {
     const pastLaunches = this.props.data.pastLaunches;
     const launchSites = this.populateLaunches();
     const activeLaunch = this.props.data.activeLaunch;
-    console.log(launchSites);
     return (
       <div className="route-container">
 

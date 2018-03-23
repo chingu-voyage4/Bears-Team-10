@@ -290,6 +290,8 @@ a {
     .spacex-container #launch-container .list-item:hover {
       background-color: #eee;
       cursor: pointer; }
+  .spacex-container #launch-sort {
+    align-self: center; }
 
 @media (max-width: 767px) {
   .spacex-container #launch-container {
