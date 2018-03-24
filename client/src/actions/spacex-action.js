@@ -75,3 +75,9 @@ export function setActiveLaunch(launch) {
     dispatch({type: "SET_ACTIVE_LAUNCH", payload: launch});
   }
 }
+
+export function setSortFilter(filter) {
+  return function(dispatch) {
+    dispatch({type: "SET_SORT_FILTER", payload: filter});
+  }
+}
