@@ -54,6 +54,7 @@ class App extends Component {
           <RedditFeed subreddit="NASA" />
           <RedditFeed subreddit="SpaceX" />
 
+
           <Footer />
         </div>
       </Router>

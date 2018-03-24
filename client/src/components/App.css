@@ -89,7 +89,7 @@ a {
       width: 100%; }
   .potd-container h2, .potd-container h3 {
     text-align: center; }
-  .potd-container h2 {
+  .potd-container h2, .potd-container h3 {
     line-height: 1.4;
     padding-bottom: 15px; }
   .potd-container hr {
@@ -106,12 +106,21 @@ a {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.6;
-    text-align: center; }
+    line-height: 1.6; }
 
 @media (max-width: 767px) {
-  .container .description p {
-    width: 100%; } }
+  .potd-container .iframe-container {
+    padding: 2em; }
+    .potd-container .iframe-container .daily-media {
+      width: 100%; }
+  .potd-container h2, .potd-container h3 {
+    padding: .2em; }
+  .potd-container .description p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+    line-height: 1.6; } }
 
 .reddit-container {
   background-color: #263238;
@@ -374,6 +383,10 @@ a {
     padding: 2em;
     font-size: 2em;
     color: snow; }
+  .homepage-section .homepage-subtitle-top {
+    text-align: center;
+    padding: 2em;
+    color: snow; }
   .homepage-section .homepage-title-bottom {
     text-align: center;
     padding: 2em;
@@ -383,7 +396,31 @@ a {
     line-height: 1.5;
     color: snow;
     font-weight: 500;
-    padding: 1em 0; }
+    padding: 1em 0;
+    width: 20%;
+    margin: auto; }
+  .homepage-section .button-container {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
+  .homepage-section button {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 2em;
+    text-transform: uppercase;
+    height: 3em;
+    width: 10em;
+    color: snow;
+    font-weight: bold;
+    border-radius: 40px;
+    text-shadow: none;
+    border: 2px solid #fff;
+    background-color: transparent;
+    line-height: 1.5; }
+    .homepage-section button:hover {
+      background-color: #797a89; }
   .homepage-section .homepage-paragraph-bottom {
     line-height: 1.5;
     color: darkslategrey;
@@ -429,6 +466,31 @@ a {
     -moz-background-size: cover;
     -o-background-size: cover;
     height: 100vh; }
+  .homepage-section .homepage-title-top, .homepage-section .homepage-title-bottom {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.2;
+    height: 1.2em; }
+  .homepage-section .homepage-subtitle-top {
+    padding-top: 1em;
+    padding-bottom: 0;
+    line-height: 1.2; }
+  .homepage-section .homepage-paragraph-top {
+    width: 80%; }
+  .homepage-section .homepage-paragraph-bottom {
+    width: 90%;
+    margin: auto;
+    line-height: 1.6; }
+  .homepage-section button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    text-transform: uppercase;
+    height: 3em;
+    width: 10em;
+    color: snow;
+    font-weight: bold; }
   .features #features-list {
     display: flex;
     flex-direction: column; }

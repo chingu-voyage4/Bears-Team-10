@@ -1,13 +1,18 @@
 import React from 'react';
-
+import PictureOfTheDay from './PictureOfTheDay';
 import LgIcon from '../Icons/LgIcon';
 import { DATA_ICON, MAP_ICON, ROCKET_ICON } from '../Icons/IconList';
 
 const Homepage = props => (
   <div>
     <div className="homepage-section homepage-top">
-      <h1 className="homepage-title-top">Homepage</h1>
-      <p className="homepage-paragraph-top">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <h1 className="homepage-title-top">Are you a space enthusiast too?</h1>
+      <h3 className="homepage-subtitle-top">Never miss another launch</h3>
+      <p className="homepage-paragraph-top">We&#39;ve compiled several NASA and SpaceX API&#39;s in one place, along with a searchbar that searches all of them. </p>
+      <div className="button-container">
+        <button>Register</button>
+        <button>Log In</button>
+      </div>
     </div>
 
     <div className="features">
@@ -32,11 +37,13 @@ const Homepage = props => (
     </div>
 
     <div className="homepage-section">
-      <h1 className="homepage-title-bottom">Another Content Section</h1>
-      <p className="homepage-paragraph-bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <p className="homepage-paragraph-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat necessitatibus, sequi, nobis accusamus optio corporis ut officia iste quibusdam ullam autem dicta aperiam animi, earum odit ducimus ipsam illo incidunt, sint quam! Eligendi corrupti similique, cumque voluptate veritatis fugiat. Accusamus qui omnis nemo eligendi, cumque odio ut quas consectetur et nisi soluta recusandae excepturi! Consectetur voluptatibus officia minus veritatis iure mollitia commodi in. A excepturi libero fugit esse eveniet repudiandae aut, labore odio ipsa dolores maxime! Temporibus, repellendus, fuga.</p>
-      <p className="homepage-paragraph-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat necessitatibus, sequi, nobis accusamus optio corporis ut officia iste quibusdam ullam autem dicta aperiam animi, earum odit ducimus ipsam illo incidunt, sint quam! Eligendi corrupti similique, cumque voluptate veritatis fugiat. Accusamus qui omnis nemo eligendi, cumque odio ut quas consectetur et nisi soluta recusandae excepturi! Consectetur voluptatibus officia minus veritatis iure mollitia commodi in. A excepturi libero fugit esse eveniet repudiandae aut, labore odio ipsa dolores maxime! Temporibus, repellendus, fuga.</p>
+      <h1 className="homepage-title-bottom">Everything in one place</h1>
+      <p className="homepage-paragraph-bottom">There is a wealth of knowledge available on the internet when it comes to everything, and the same is true for space exploration and astronomy. NASA has made tons of their data available to the public online through various APIs and website. Combing through all the data from various NASA organizations in search of what youre looking for can be cumbersome and time consuming. Thats exactly why we have compiled this data in an easy to search format.</p>
+      <p className="homepage-paragraph-bottom">In addition to NASAs work there is also major excitement surrounding Elon Musk and SpaceX. SpaceXs mission to land humans on Mars has regenerated the publics interest in space exploration and it seems as if there is always an upcoming SpaceX launch.</p>
+      <p className="homepage-paragraph-bottom">The buzz around this new chapter in space exploration and the massive amounts of data available to the public has inspired us to compile this data in one place and make finding what youre searching for significantly easier and less time consuming. Search the <a href="#">data</a>, <a href="#">browse the location of facilities</a>, <a href="#">sign up for email reminders</a> on upcoming launches, or check out the NASA picture of the day: </p>
     </div>
+
+    <PictureOfTheDay />
 
   </div>
 );

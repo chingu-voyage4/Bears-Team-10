@@ -17,7 +17,7 @@
     text-align: center;
   }
 
-  h2 {
+  h2, h3 {
     line-height: 1.4;
     padding-bottom: 15px;
   }
@@ -42,16 +42,36 @@
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
-      text-align: center;
+      //text-align: center;
     }
   }
 }
 
 @media(max-width: 767px) {
-  .container {
-    .description {
-      p {
+  .potd-container {
+
+    .iframe-container {
+      padding: 2em;
+      //max-width: 600px;
+
+      .daily-media {
         width: 100%;
+      }
+    }
+
+    h2, h3 {
+      padding: .2em;
+    }
+
+    .description {
+
+      p {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5em;
+        line-height: 1.6;
+
       }
     }
   }

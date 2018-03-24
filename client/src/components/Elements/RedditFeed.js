@@ -10,15 +10,15 @@ class RedditFeed extends Component {
 
   render() {
     const data = this.props.data.redditData;
-    //console.log(data);
+    console.log("Data: ", data);
     const display = Object.keys(data).map((d, key) => {
-      console.log(data.data.children[key].data.title);
-      console.log(data.data.children[key].data.url);
+      //console.log(data.data.children[key].data.title);
+      //console.log(data.data.children[key].data.url);
       return (
           <div className="story">
             <li key={key}>
               <a href={data.data.children[key].data.url}>
-              {data.data.children[key].data.title}</a><br/>
+              {data.data.children[key].data.title}</a>
             </li>
           </div>
       )
