@@ -39,7 +39,7 @@ class SpaceX extends Component {
     return (
       <div className="route-container">
 
-        <h2 className="spacex-header">SpaceX Info</h2>
+        <h2 className="spacex-header">SpaceX Launches</h2>
 
         <div className="spacex-container">
           <DisplayLaunch launch={activeLaunch} />

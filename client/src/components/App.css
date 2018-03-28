@@ -265,8 +265,9 @@ a {
       .spacex-container .displayLaunch-container .displayLaunch-list .displayLaunch-item {
         padding: 5px 0; }
     .spacex-container .displayLaunch-container #spacex-mission-patch {
-      width: 500px;
-      height: 500px; }
+      align-self: center;
+      width: 250px;
+      height: 250px; }
   .spacex-container #launch-container {
     margin: 25px auto;
     width: 500px;
