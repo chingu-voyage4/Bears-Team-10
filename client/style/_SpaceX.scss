@@ -21,7 +21,7 @@
 		text-align: center;
 
 		.displayLaunch-title {
-			padding-bottom: 15px;
+			padding-top: 15px;
 		}
 		
 		.displayLaunch-list {
@@ -30,6 +30,22 @@
 			.displayLaunch-item {
 				padding: 5px 0;
 			}
+		}
+		.displayLaunch-details {
+			#success {
+				color: green;
+				padding-bottom: 15px;
+				
+			}
+			#failed {
+				color: red;
+				padding-bottom: 15px;
+			}
+		}
+		#spacex-mission-patch {
+			align-self: center;
+			width: 250px;
+			height: 250px;
 		}
 	}
 

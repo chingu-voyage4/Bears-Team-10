@@ -39,13 +39,13 @@ class SpaceX extends Component {
     return (
       <div className="route-container">
 
-        <h2 className="spacex-header">SpaceX Info</h2>
+        <h2 className="spacex-header">SpaceX Launches</h2>
 
         <div className="spacex-container">
-          <DisplayLaunch launch={activeLaunch} />
+          {activeLaunch ? 
+          <DisplayLaunch launch={activeLaunch} /> : null}
           <div id="launch-sort">
             Sort by <select onChange={this.sort.bind(this)}>
-                      <option value="date">Date</option>
                       <optgroup label="Launch Site">
                         {launchSites.map(function(site) {
                           return <option value={site}> {site}</option>
