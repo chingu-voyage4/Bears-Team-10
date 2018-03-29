@@ -259,11 +259,17 @@ a {
     margin: 25px auto;
     text-align: center; }
     .spacex-container .displayLaunch-container .displayLaunch-title {
-      padding-bottom: 15px; }
+      padding-top: 15px; }
     .spacex-container .displayLaunch-container .displayLaunch-list {
       margin-bottom: 15px; }
       .spacex-container .displayLaunch-container .displayLaunch-list .displayLaunch-item {
         padding: 5px 0; }
+    .spacex-container .displayLaunch-container .displayLaunch-details #success {
+      color: green;
+      padding-bottom: 15px; }
+    .spacex-container .displayLaunch-container .displayLaunch-details #failed {
+      color: red;
+      padding-bottom: 15px; }
     .spacex-container .displayLaunch-container #spacex-mission-patch {
       align-self: center;
       width: 250px;

@@ -3,7 +3,7 @@ export default function reducer (state={
   rockets: [],
   filter: null,
   company: [],
-  activeLaunch: [],
+  activeLaunch: null,
   futureLaunches: [],
   pastLaunches: [],
   launchPads: [],
