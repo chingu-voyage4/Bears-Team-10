@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
+
 }
 
 .react-autosuggest__input {
@@ -56,11 +57,22 @@
   .react-autosuggest__container {
     width: 50%;
     margin-top: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  .button-container {
+    left: 880px;
+    position: absolute;
+  }
+
+
 
   .container {
     height: 1100em;
     overflow: contain;
+    margin-top: 5em;
 
     li {
       width: 30%;

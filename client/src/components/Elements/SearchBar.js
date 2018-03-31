@@ -91,12 +91,14 @@ class SearchBar extends Component {
   const data = this.state.results;
 
   const display = Object.keys(data).map((d, key) => {
-    console.log(data[0].links[0].href)
+    console.log("Search data " + data[0].links[0].href)
     return (
       <div>
           <li key={key}>
           <h4>{data[key].data[0].title}</h4><br/>
-          <img src={data[0].links[0].href} alt="image" width="300" height="300"/>
+
+          {data[key].links ? (<img src={data[key].links[0].href} alt="image" width="300" height="300"/> ) : null}
+
           <p>{data[key].data[0].description}</p><br/>
           <p>{data[0].date_created}</p><br />
           <p>Keywords:{data[key].data[0].keywords}</p> <br/>
@@ -107,16 +109,19 @@ class SearchBar extends Component {
 
     // Finally, render it!
     return (
-      <div>
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-      />
-      <button onClick={this.loadSearchResults.bind(this)}>Search</button>
+        <div className= ".react-autosuggest__container">
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
+        />
+
+        {<div className="button-container">
+          <button onClick={this.loadSearchResults.bind(this)}>Search</button>
+        </div>}
 
       <div className="container">
         <ul>

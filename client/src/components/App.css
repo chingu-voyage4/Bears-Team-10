@@ -366,10 +366,17 @@ a {
 @media (min-width: 1200px) {
   .react-autosuggest__container {
     width: 50%;
-    margin-top: 2em; }
+    margin-top: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .button-container {
+    left: 880px;
+    position: absolute; }
   .container {
     height: 1100em;
-    overflow: contain; }
+    overflow: contain;
+    margin-top: 5em; }
     .container li {
       width: 30%;
       margin: 1em;
